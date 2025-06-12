@@ -1,0 +1,11 @@
+%button {
+    width: fit-content;
+    height: fit-content;
+    padding: .5rem 5rem;
+    border-radius: 10px;
+    box-shadow:  0 4px 4px 0 rgba(255, 255, 255, 0.25) inset;
+    background: linear-gradient(250deg,rgba(221, 152, 3, 0.8) 27.89%,  rgba(188, 33, 1, 0.6) 83.86%);
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase
+}
