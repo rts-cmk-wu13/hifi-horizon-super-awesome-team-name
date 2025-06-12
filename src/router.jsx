@@ -1,15 +1,15 @@
 import { createBrowserRouter } from "react-router";
-import Home from "./pages/Home";
-import Contact from "./pages/Contact";
-import ListDetail from "./pages/ListDetail";
-import Lists from "./pages/Lists";
+import Home from "./pages/views/Home";
+import Contact from "./pages/views/Contact";
+import ListDetail from "./pages/views/ListDetail";
+import Lists from "./pages/views/Lists";
 import NotFound from "./pages/NotFound";
 import { getList, getLists } from "./utilities/typicode";
 import Loading from "./components/loading/Loading";
 import { ErrorBoundary } from "./components/error/ErrorBoundary";
 import Layout from "./Layout";
 import { handleSubmit } from "./utilities/actions";
-import Login from "./pages/Login";
+import Login from "./pages/views/Login";
 import RequireAuth from "./components/requireauth/RequireAuth";
 
 const router = createBrowserRouter([
