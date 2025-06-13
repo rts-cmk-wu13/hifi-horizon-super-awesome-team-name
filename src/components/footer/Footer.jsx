@@ -5,20 +5,20 @@ export default function Footer() {
 
     return (
         <footer>
-            <div>
-                <ul>
+            <div  className="footer__linkings">
+                <ul className="footer__links">
                     <li><NavLink to="/">Home</NavLink></li>
                     <li><NavLink to="/products">Shop</NavLink></li>
                     <li><NavLink to="/about">About Us</NavLink></li>
                 </ul>
-                <ul>
+                <ul className="footer__links">
                     <li><Link to="#">Return & Refunds</Link></li>
                     <li><Link to="#">Delivery</Link></li>
                     <li><Link to="#">Privacy Policy</Link></li>
                     <li><Link to="#">Terms & Conditions</Link></li>
                 </ul>
                 <ul className="footer__somes">
-                    <li className="footer__some">
+                    <li className="footer__some footer__contact">
                         Contact
                     </li>
                     <li className="footer__some">
@@ -32,9 +32,6 @@ export default function Footer() {
                     </li>
                     <li className="footer__some">
                         <FaPhone /><a href="tel:+4401324629011">01324 629 011</a>
-                    </li>
-                    <li className="footer__some">
-                        Contact
                     </li>
                     <ul className="footer__socials">
                         <li className="footer__social">
@@ -52,7 +49,7 @@ export default function Footer() {
                     </ul>
                 </ul>
             </div>
-            <div>
+            <div  className="footer__copyright">
                 <div>
                     <FaCcStripe />
                     <FaCcVisa />
