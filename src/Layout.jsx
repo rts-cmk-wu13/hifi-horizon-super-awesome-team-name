@@ -5,9 +5,7 @@ import Header from "./components/header/Header"
 export default function Layout() {
   return (
     <>
-      <Header 
-        header="My App"
-      />
+      <Header />
 
       <main> 
       <Outlet />
