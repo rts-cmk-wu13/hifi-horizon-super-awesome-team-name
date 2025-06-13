@@ -4,5 +4,35 @@
 .header {
   @extend %flex;
   background-color: colors.$black;
+  padding: 0.2rem;
+
+  &__logoNav {
+    @extend %flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__searchUserCart {
+    @extend %flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__search {
+    input {
+      width: 4rem;
+      padding: 0.2rem 0.5rem;
+      border: none;
+      border-radius: 4px;
+    }
+  }
+
+  &__user {
+    
+  }
+
+  &__cart {
+    
+  }
 }
 
