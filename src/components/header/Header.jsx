@@ -1,20 +1,16 @@
-import { useLocation } from "react-router"
-import LogoutBtn from "../logout/LogoutBtn"
+// import { useLocation } from "react-router"
+import Logo from "../logo/Logo"
 import Navigation from "../navigation/Navigation"
+// import LogoutBtn from "../logout/LogoutBtn"
 
-export default function Header({ header }) {
-    const location = useLocation()
+
+export default function Header() {
+    // const location = useLocation()
 
     return (
-        <>
-            <h1>{header}</h1>
-            {/* Conditional rendering */}
-            {location.pathname !== "/login" && (
-                <>
-                    <Navigation />
-                    <LogoutBtn />
-                </>
-            )}
-        </>
+        <header className="header">
+            < Logo />
+            <Navigation />            
+        </header>
     )
 }
