@@ -1,0 +1,8 @@
+@use "../../style/placeholders/_Flex.scss";
+@use "../../style/variables/Colors" as colors;
+
+.header {
+  @extend %flex;
+  background-color: colors.$black;
+}
+

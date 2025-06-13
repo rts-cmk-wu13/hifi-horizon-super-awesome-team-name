@@ -1,7 +1,16 @@
-nav {
+@use "/src/style/variables/Colors" as color;
+
+nav ul {
     display: flex;
-    padding: 1rem 2rem;
-    background-color: #000;
+    align-items: center;
+    // padding: 1rem 2rem;
+    // background-color: #000;
+    list-style: none;
+    
+    & a {
+        color: color.$white;
+        font-size: 0.6rem;
+    }
 
     & a.active {
         font-weight: bold;

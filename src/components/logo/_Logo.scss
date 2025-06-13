@@ -1,0 +1,7 @@
+// @use "/src/style/variables/Colors" as color;
+@use "../../style/variables/Colors" as colors;
+
+.logo p {
+    color: colors.$white;
+  }
+
