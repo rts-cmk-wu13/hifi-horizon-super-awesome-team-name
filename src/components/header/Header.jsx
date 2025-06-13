@@ -1,20 +1,24 @@
-import { useLocation } from "react-router"
-import LogoutBtn from "../logout/LogoutBtn"
+
 import Navigation from "../navigation/Navigation"
+import Logo from "../logo/Logo"
+import { FaUser } from "react-icons/fa";
+import { IoMdCart } from "react-icons/io";
 
 export default function Header() {
-    // const location = useLocation()
 
     return (
-        <>
-            <h1>Header</h1>
-            {/* Conditional rendering */}
-            {/* {location.pathname !== "/login" && (
-                <>
-                    <Navigation />
-                    <LogoutBtn />
-                </>
-            )} */}
-        </>
+        <header className="header">
+            <Logo />
+            <Navigation />
+            <div className="header__search">
+                <input type="text" placeholder="Search..." />
+            </div>
+            <div className="header__user">
+                <FaUser color="white" />
+            </div>
+            <div className="header__cart">
+                <IoMdCart color="white" />
+            </div>
+        </header>
     )
 }
