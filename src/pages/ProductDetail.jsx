@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router";
 
-export default function ListDetail() {
+export default function ProductDetail() {
     
    const list = useLoaderData()
 

@@ -1,0 +1,228 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "clu@mail.dk",
+      "username": "Carsten",
+      "password": "$2a$10$bbeRYksb2wHNhyc3Zeq9aOSVM0gIJ2qbnqD.PCQqbA/RTw2jqfbQS",
+      "name": "Carsten Lund"
+    },
+    {
+      "email": "be@rts.dk",
+      "password": "$2a$10$UfP6k.L1l0g2bVXilU1m4.urko74nX91sSxAmyMexBAexh5kHrdmK",
+      "id": 2
+    },
+    {
+      "email": "example@example.com",
+      "password": "$2a$10$MpoZnZImxT0ZmoOjNl8zGeOJi0/sL.rrXtSe9GWd7ohaWj.unfrkW",
+      "id": 3
+    },
+    {
+      "email": "con@mail.com",
+      "password": "$2a$10$rm/NdA9vgI20vq55MtAX/Oq7RopLQWNrBXHIePBVOE6rQn/Tx5ln.",
+      "id": 4
+    }
+  ],
+"Products": [
+    {
+      "id": 101,
+      "image": "public/Produktbilleder/cd_afspillere/creek_classic_cd.jpg",
+      "categories": "CD Players",
+      "brand": "Creek",
+      "type": "Classic CD Player",
+      "output": "2V RMS",
+      "price": "4999",
+      "description": "The Creek Classic CD Player embodies audiophile excellence with its precision-engineered laser mechanism and premium 24-bit DAC. Features include a robust aluminum chassis, anti-vibration feet, and sophisticated power supply design for optimal signal integrity. Perfect for music enthusiasts seeking warm, detailed sound reproduction."
+    },
+    {
+      "id": 102,
+      "image": "public/Produktbilleder/cd_afspillere/creek_Destiny_CD.jpg",
+      "categories": "CD Players",
+      "brand": "Creek",
+      "type": "Destiny CD Player",
+      "output": "2.5V RMS",
+      "price": "6999",
+      "description": "Creek's flagship Destiny CD Player represents the pinnacle of digital audio reproduction. Featuring a high-end Wolfson DAC, proprietary jitter reduction, and fully balanced analog stage. The separate power supply ensures pristine audio quality, while the solid aluminum construction eliminates unwanted resonance."
+    },
+    {
+      "id": 103,
+      "image": "public/Produktbilleder/cd_afspillere/creek_evo_cd.jpg",
+      "categories": "CD Players",
+      "brand": "Creek",
+      "type": "Evolution CD Player",
+      "output": "2.3V RMS",
+      "price": "5499",
+      "description": "The Evolution CD Player combines modern technology with classic Creek sound quality. Features include advanced error correction, high-precision clock, and carefully selected audio components. The sleek design houses sophisticated power regulation and a premium transport mechanism."
+    },
+    {
+      "id": 104,
+      "image": "public/Produktbilleder/cd_afspillere/Exp_2010S_CD.gif",
+      "categories": "CD Players",
+      "brand": "Exposure",
+      "type": "2010S CD Player",
+      "output": "2.0V RMS",
+      "price": "3999",
+      "description": "Exposure's 2010S CD Player delivers exceptional performance at its price point. Built with a high-quality DAC and precise servo control, it offers detailed, musical playback. The minimalist design focuses on audio performance, with carefully selected components throughout."
+    },
+    {
+      "id": 105,
+      "image": "public/Produktbilleder/forforstaerkere/creek_classic_pre.jpg",
+      "categories": "Preamplifiers",
+      "brand": "Creek",
+      "type": "Classic Preamplifier",
+      "output": "Balanced XLR",
+      "price": "3499",
+      "description": "The Classic Preamplifier offers exceptional signal control with minimal coloration. Features balanced inputs/outputs, discrete class-A gain stages, and precise volume control. Perfect for audiophiles seeking transparent sound reproduction."
+    },
+    {
+      "id": 106,
+      "image": "public/Produktbilleder/forforstaerkere/creek_Destiny_Pre.jpg",
+      "categories": "Preamplifiers",
+      "brand": "Creek",
+      "type": "Destiny Preamplifier",
+      "output": "Balanced XLR/RCA",
+      "price": "7999",
+      "description": "Creek's premium Destiny Preamplifier features fully balanced circuitry, military-grade components, and sophisticated power supply regulation. The dual-mono design ensures optimal channel separation, while multiple inputs accommodate various sources."
+    },
+    {
+      "id": 107,
+      "image": "public/Produktbilleder/forforstaerkere/creek_OBH_22_Pre.jpg",
+      "categories": "Preamplifiers",
+      "brand": "Creek",
+      "type": "OBH-22 Passive Pre",
+      "output": "RCA Output",
+      "price": "2499",
+      "description": "The OBH-22 Passive Preamplifier offers pure signal control without active components. Perfect for minimalist systems, it features high-quality volume control and input selection without coloring the sound."
+    },
+    {
+      "id": 108,
+      "image": "public/Produktbilleder/effektforstaerkere/creek_classic_power.jpg",
+      "categories": "Power Amplifiers",
+      "brand": "Creek",
+      "type": "Classic Power Amp",
+      "output": "100W per channel",
+      "price": "5999",
+      "description": "The Classic Power Amplifier delivers robust performance with 100W per channel. Features include Class-AB operation, substantial power supply, and protection circuits. Ideal for driving demanding speakers with authority and finesse."
+    },
+    {
+      "id": 109,
+      "image": "public/Produktbilleder/effektforstaerkere/creek_Destiny_Amp.jpg",
+      "categories": "Power Amplifiers",
+      "brand": "Creek",
+      "type": "Destiny Power Amp",
+      "output": "120W per channel",
+      "price": "8999",
+      "description": "Creek's flagship power amplifier, the Destiny delivers exceptional power and control. Features dual-mono construction, massive toroidal transformers, and sophisticated protection systems. Perfect for high-end audio systems."
+    },
+    {
+      "id": 110,
+      "image": "public/Produktbilleder/effektforstaerkere/creek_Evolution_amp.jpg",
+      "categories": "Power Amplifiers",
+      "brand": "Creek",
+      "type": "Evolution Power Amp",
+      "output": "85W per channel",
+      "price": "6499",
+      "description": "The Evolution Power Amplifier combines efficiency with musicality. 85W per channel provides ample power for most speakers, while sophisticated thermal management ensures reliable operation. Features include DC protection and soft-start circuitry."
+    },
+    {
+      "id": 111,
+      "image": "public/Produktbilleder/dvdafspillere/creek_classic_dvd.jpg",
+      "categories": "DVD Players",
+      "brand": "Creek",
+      "type": "Classic DVD Player",
+      "output": "HDMI/Component",
+      "price": "3999",
+      "description": "The Classic DVD Player offers superior video and audio performance. Features include high-quality DACs, progressive scan output, and comprehensive format support. Perfect for both movie and music playback."
+    },
+    {
+      "id": 112,
+      "image": "public/Produktbilleder/dvdafspillere/creek_evo_dvd.jpg",
+      "categories": "DVD Players",
+      "brand": "Creek",
+      "type": "Evolution DVD Player",
+      "output": "HDMI/Component/SPDIF",
+      "price": "4999",
+      "description": "The Evolution DVD Player represents Creek's advanced digital playback technology. Features multiple digital outputs, superior error correction, and audiophile-grade analog stages. Ideal for high-end home theater systems."
+    },
+    {
+      "id": 113,
+      "image": "public/Produktbilleder/int_forstaerkere/creek_4330.jpg",
+      "categories": "Integrated Amplifiers",
+      "brand": "Creek",
+      "type": "4330 Integrated Amp",
+      "output": "50W per channel",
+      "price": "4499",
+      "description": "The 4330 Integrated Amplifier delivers refined performance in a compact package. 50W per channel provides ample power for most applications, while high-quality components ensure musical accuracy."
+    },
+    {
+      "id": 114,
+      "image": "public/Produktbilleder/int_forstaerkere/creek_5350SE.jpg",
+      "categories": "Integrated Amplifiers",
+      "brand": "Creek",
+      "type": "5350SE Integrated",
+      "output": "85W per channel",
+      "price": "6999",
+      "description": "The 5350SE represents Creek's special edition integrated amplifier. Features include upgraded components, enhanced power supply, and sophisticated protection circuits. Delivers exceptional detail and dynamics."
+    },
+    {
+      "id": 115,
+      "image": "public/Produktbilleder/int_forstaerkere/creek_classic_int.jpg",
+      "categories": "Integrated Amplifiers",
+      "brand": "Creek",
+      "type": "Classic Integrated",
+      "output": "75W per channel",
+      "price": "5499",
+      "description": "The Classic Integrated combines preamp and power amp excellence in one chassis. Features include multiple inputs, high-current output stage, and precise volume control. Perfect for audiophiles seeking simplicity."
+    },
+    {
+      "id": 116,
+      "image": "public/Produktbilleder/int_forstaerkere/creek_Destiny_int.jpg",
+      "categories": "Integrated Amplifiers",
+      "brand": "Creek",
+      "type": "Destiny Integrated",
+      "output": "100W per channel",
+      "price": "8999",
+      "description": "Creek's flagship integrated amplifier, the Destiny combines sophistication with power. Features include balanced inputs, dual-mono construction, and reference-grade components throughout."
+    },
+    {
+      "id": 117,
+      "image": "public/Produktbilleder/int_forstaerkere/creek_evolution_int.jpg",
+      "categories": "Integrated Amplifiers",
+      "brand": "Creek",
+      "type": "Evolution Integrated",
+      "output": "90W per channel",
+      "price": "7499",
+      "description": "The Evolution Integrated represents Creek's modern approach to amplification. Features advanced protection, multiple inputs, and sophisticated power supply design. Delivers clean, powerful sound."
+    },
+    {
+      "id": 118,
+      "image": "public/Produktbilleder/int_forstaerkere/Exp_2010S.gif",
+      "categories": "Integrated Amplifiers",
+      "brand": "Exposure",
+      "type": "2010S Integrated",
+      "output": "75W per channel",
+      "price": "5999",
+      "description": "The Exposure 2010S Integrated delivers exceptional performance at its price point. Features include high-current capability, multiple inputs, and precise volume control. Built for musical enjoyment."
+    },
+    {
+      "id": 119,
+      "image": "public/Produktbilleder/tuners/creek_classic_tuner.jpg",
+      "categories": "Tuners",
+      "brand": "Creek",
+      "type": "Classic Tuner",
+      "output": "Analog RCA",
+      "price": "2999",
+      "description": "The Classic Tuner offers superior FM/AM reception with minimal noise. Features include precise digital frequency display, multiple presets, and high-quality analog output stage. Perfect for radio enthusiasts."
+    },
+    {
+      "id": 120,
+      "image": "public/Produktbilleder/tuners/creek_Evolution_tuner.jpg",
+      "categories": "Tuners",
+      "brand": "Creek",
+      "type": "Evolution Tuner",
+      "output": "Digital/Analog Out",
+      "price": "3999",
+      "description": "Creek's Evolution Tuner represents the latest in radio technology. Features include digital signal processing, RDS support, and both digital and analog outputs. Ideal for modern audio systems."
+    }
+  ]
+}
