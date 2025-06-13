@@ -1,7 +1,7 @@
 import { Link, useLoaderData } from "react-router";
-import { useAuth } from "../../contexts/AuthContext"
+import { useAuth } from "../contexts/AuthContext"
 
-export default function Lists() {
+export default function Products() {
     const lists = useLoaderData();
     const { token } = useAuth()
 

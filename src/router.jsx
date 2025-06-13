@@ -1,16 +1,18 @@
 import { createBrowserRouter } from "react-router";
-import Home from "./pages/views/Home";
-import Contact from "./pages/views/Contact";
-import ListDetail from "./pages/views/ListDetail";
-import Lists from "./pages/views/Lists";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import ProductDetail from "./pages/ProductDetail";
+import Products from "./pages/Products";
 import NotFound from "./pages/NotFound";
 import { getList, getLists } from "./utilities/typicode";
 import Loading from "./components/loading/Loading";
 import { ErrorBoundary } from "./components/error/ErrorBoundary";
 import Layout from "./Layout";
 import { handleSubmit } from "./utilities/actions";
-import Login from "./pages/views/Login";
+import Login from "./pages/Login";
 import RequireAuth from "./components/requireauth/RequireAuth";
+import About from "./pages/About";
+import MoreInfo from "./pages/MoreInfo";
 
 const router = createBrowserRouter([
     {
@@ -24,19 +26,19 @@ const router = createBrowserRouter([
                 element: <Home />
             },
             {
-                path: "lists",
+                path: "products",
                 element: (
                     <RequireAuth >
-                        <Lists />
+                        <Products />
                     </ RequireAuth>
                 ),
                 loader: getLists,
             },
             {
-                path: "lists/:id",
+                path: "products/:id",
                 element: (
                     <RequireAuth >
-                        <ListDetail />
+                        <ProductDetail />
                     </RequireAuth>
                 ),
                 loader: getList,
@@ -45,6 +47,14 @@ const router = createBrowserRouter([
                 path: "contact",
                 element: <Contact />,
                 action: handleSubmit,
+            },
+            {
+                path: "about",
+                element: <About />
+            },
+            {
+                path: "info",
+                element: <MoreInfo />
             },
             {
                 path: "login",
