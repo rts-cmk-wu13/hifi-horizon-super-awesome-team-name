@@ -1,0 +1,29 @@
+@use "../../style/variables/Colors" as c;
+
+.homeinfo {
+    background-color: c.$black;
+    padding: 6.8rem 2.9rem 4.625rem;
+    display: flex;
+    gap: 10rem;
+    line-height: 1.5;
+    h2 {
+        color: c.$white;
+        font-size: 1.5rem;
+        margin-bottom: 1.1rem;
+    }
+    h3 {
+        color: c.$white;
+        font-size: .875rem;
+    }
+    p {
+        color: c.$light-1-grey;
+        font-size: .875rem;
+        margin-bottom: 1rem;
+    }
+    section:first-of-type {
+        flex: 2;
+    }
+    section:last-of-type {
+        flex: 1;
+    }
+}
