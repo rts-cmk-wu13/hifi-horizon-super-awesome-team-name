@@ -4,8 +4,8 @@ import { Link, NavLink } from "react-router"
 export default function Footer() {
 
     return (
-        <footer>
-            <div  className="footer__linkings">
+        <footer className="footer">
+            <div className="footer__linkings">
                 <ul className="footer__links">
                     <li><NavLink to="/">Home</NavLink></li>
                     <li><NavLink to="/products">Shop</NavLink></li>
@@ -25,13 +25,13 @@ export default function Footer() {
                         2 Joppa Rd, Edinburgh, EH15 2EU
                     </li>
                     <li className="footer__some">
-                        <FaPhone /><a href="tel:+4401315567901">0131 556 7901</a>
+                        <FaPhone className="footer__phone" /><a href="tel:+4401315567901">0131 556 7901</a>
                     </li>
                     <li className="footer__some">
                         44 Cow Wynd, Falkirk, Central Region, FK1 1PU
                     </li>
                     <li className="footer__some">
-                        <FaPhone /><a href="tel:+4401324629011">01324 629 011</a>
+                        <FaPhone className="footer__phone" /><a href="tel:+4401324629011">01324 629 011</a>
                     </li>
                     <ul className="footer__socials">
                         <li className="footer__social">
@@ -49,14 +49,16 @@ export default function Footer() {
                     </ul>
                 </ul>
             </div>
-            <div  className="footer__copyright">
+            <div className="footer__copyright">
                 <div>
                     <FaCcStripe />
                     <FaCcVisa />
                     <FaCcMastercard />
                 </div>
-                <p>HiFi Horizon (Edinburgh) Ltd is registered in Scotland. No: SC049298. Registered office: 2 Joppa Rd, Edinburgh EH15 2EU</p>
-                <p>Designed by WU07 :)</p>
+                <div>
+                    <p>HiFi Horizon (Edinburgh) Ltd is registered in Scotland. No: SC049298. Registered office: 2 Joppa Rd, Edinburgh EH15 2EU</p>
+                    <p>Designed by WU07 :)</p>
+                </div>
             </div>
         </footer>
 
