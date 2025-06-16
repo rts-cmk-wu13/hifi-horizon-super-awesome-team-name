@@ -15,8 +15,10 @@ export default function ProductAmount() {
     };
 
     return (
-        <div className="product-amount">
-            
+        <div className="product__amount">
+            <div className="product__colors">
+                <p>hej</p>
+            </div>
         </div>
     );
 }

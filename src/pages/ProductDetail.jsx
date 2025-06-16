@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router";
+import ProductAmount from "../components/productamount/ProductAmount";
 
 export default function ProductDetail() {
     
@@ -7,6 +8,7 @@ export default function ProductDetail() {
     return (
         <>
         <h2>{list.name}</h2>
+        <ProductAmount />
         </>
     )
 }
