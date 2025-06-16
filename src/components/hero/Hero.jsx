@@ -4,9 +4,7 @@ export default function Hero() {
 
     return (
         <section className="hero">
-            <div className="hero-content">
-                <img src={heroImage} alt="Hero" />
-            </div>
+          <img src={heroImage} alt="Hero" />            
         </section>
     );
 }
