@@ -7,7 +7,7 @@ export default function Nyhed() {
       <p>Subscribing to our newsletter secures you up to date information about HiFi Horizons latest updates and offers.</p>
       <form>
         <input type="email" name="email" id="email" />
-        <button type="submit">Sign up</button>
+        <button type="submit" className="nyhed-btn">Sign up</button>
       </form>
     </section>
   )

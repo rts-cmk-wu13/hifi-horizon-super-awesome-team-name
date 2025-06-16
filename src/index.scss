@@ -8,6 +8,7 @@
 @use "./style/mixins/Font-mixin";
 @use "./components/hero/hero.scss";
 @use "./components/nyhedsbrev/nyhed.scss";
+@use "./components/productSpecific/productSpecific.scss";
 
 * {
   margin: 0;

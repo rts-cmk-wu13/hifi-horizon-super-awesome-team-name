@@ -3,7 +3,7 @@ import { useAuth } from "../contexts/AuthContext"
 
 export default function Products() {
     const lists = useLoaderData();
-    const { token } = useAuth()
+    // const { token } = useAuth()
 
     return (
         <ul>
