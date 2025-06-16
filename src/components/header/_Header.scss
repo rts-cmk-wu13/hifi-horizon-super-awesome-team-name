@@ -1,10 +1,12 @@
 @use "../../style/placeholders/_Flex.scss";
 @use "../../style/variables/Colors" as colors;
+// @use "../../style/variables/Colors" as colors;
 
 .header {
   @extend %flex;
   background-color: colors.$black;
-  padding: 0.2rem;
+  padding: 0.5rem;
+  flex-wrap: wrap;
 
   &__logoNav {
     @extend %flex;
@@ -19,8 +21,15 @@
   }
 
   &__search {
+    @extend %flex;
+    align-items: center;
+    background-color: colors.$white;
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.2rem;
+
     input {
-      width: 4rem;
+      width: 7rem;
+      font-size: 0.6rem;
       padding: 0.2rem 0.5rem;
       border: none;
       border-radius: 4px;
