@@ -5,6 +5,8 @@
 @use "./components/loading/Loading";
 @use "./components/navigation/Navigation";
 @use "./style/variables/Colors";
+@use "./style/mixins/Font-mixin";
+@use "./components/hero/hero.scss";
 
 * {
   margin: 0;
@@ -12,9 +14,23 @@
   box-sizing: border-box;
 } 
 
+html, body {
+  font-family: Font-mixin.$base-font;
+}
+
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
