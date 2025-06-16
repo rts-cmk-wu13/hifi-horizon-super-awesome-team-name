@@ -28,18 +28,18 @@ const router = createBrowserRouter([
             {
                 path: "products",
                 element: (
-                    <RequireAuth >
+                    // <RequireAuth >
                         <Products />
-                    </ RequireAuth>
+                    // </ RequireAuth>
                 ),
                 loader: getLists,
             },
             {
                 path: "products/:id",
                 element: (
-                    <RequireAuth >
+                    // <RequireAuth >
                         <ProductDetail />
-                    </RequireAuth>
+                    // </RequireAuth>
                 ),
                 loader: getList,
             },
