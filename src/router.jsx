@@ -13,7 +13,7 @@ import Login from "./pages/Login";
 import RequireAuth from "./components/requireauth/RequireAuth";
 import About from "./pages/About";
 import MoreInfo from "./pages/MoreInfo";
-
+ 
 const router = createBrowserRouter([
     {
         path: "/",
@@ -67,8 +67,5 @@ const router = createBrowserRouter([
         ]
     }
 ])
-
+ 
 export default router
-
-
-

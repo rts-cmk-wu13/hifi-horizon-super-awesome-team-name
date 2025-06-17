@@ -1,0 +1,42 @@
+@use "../../style/variables/Colors" as Colors;
+@use "../../style/placeholders/Flex";
+
+.nyhed {
+  @extend %flex-column;
+  width: 80%;
+  margin: 2rem auto;
+  text-align: center;
+  
+    h3 {
+      font-size: 0.8rem;
+    }
+
+    p {
+      font-size: 0.5rem;
+      margin-block: 0.5rem;
+    }  
+
+    form {
+      @extend %flex;
+      justify-content: center;
+      align-items: center;
+      // gap: 0.5rem;
+      margin-top: 0.5rem;
+    } 
+
+    input[type="email"] {
+      margin-inline-end: 0.3rem;
+      background-color: Colors.$light-2-grey;
+      border: none;
+      border-radius: 0.1rem;
+    }
+
+    .nyhed-btn {
+      font-size: 0.5rem;
+      padding: 0.3rem 0.4rem;
+      color: Colors.$white;
+      background-color: Colors.$orange;
+      border: none;
+    }
+  
+}

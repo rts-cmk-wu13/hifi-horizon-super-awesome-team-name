@@ -1,0 +1,6 @@
+@use '../../../src/style/placeholders/Flex.scss';
+
+.product-specific {
+  @extend %gridTwo;
+  margin-block: 2rem;
+}
