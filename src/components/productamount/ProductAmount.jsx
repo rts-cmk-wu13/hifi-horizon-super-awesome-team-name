@@ -1,5 +1,6 @@
 import "./_ProductAmount.scss";
 
+
 const initialCount = 0;
 
 export default function ProductAmount() {
