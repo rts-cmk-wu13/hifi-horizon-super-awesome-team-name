@@ -1,10 +1,13 @@
-import { Link } from "react-router"
+import Hero from "../components/hero/Hero";
+import Homeinfo from "../components/homeinfo/Homeinfo";
+import Nyhed from "../components/nyhedsbrev/Nyhed";
 
 export default function Home() {
     return (
         <>
-            <h1>Home</h1>
-            <Link to="/contact">Contact</Link>
+            <Hero />
+            <Homeinfo />
+            <Nyhed />
         </>
     )
 }

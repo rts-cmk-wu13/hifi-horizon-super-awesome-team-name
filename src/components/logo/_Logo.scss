@@ -1,0 +1,24 @@
+// @use "/src/style/variables/Colors" as color;
+@use "../../style/variables/Colors" as colors;
+
+.logo {
+  position: relative;
+  background-color: transparent;
+  width: 2rem;
+  padding: 0.8rem;
+  border: 0.01rem solid colors.$white;
+
+    & p {
+    position: absolute;
+    bottom: 30%;
+    transform: translateY(50%);
+    left: 0;  
+    color: colors.$white;
+    font-size: 0.5rem;
+    font-weight: 600;
+    width: 0.2rem;
+    line-height: 0.5rem;
+    color: colors.$white;
+  }
+}
+
