@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useLoaderData } from "react-router";
 import "./_ProductAmount.scss";
 
+
 const initialCount = 0;
 
 export default function ProductAmount() {
