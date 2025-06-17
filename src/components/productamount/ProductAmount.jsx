@@ -18,12 +18,30 @@ export default function ProductAmount() {
     return (
         <div className="product__choice">
             <div className="product__colors">
-
+                <button>
+                    <span className="black"></span>
+                    <p>Black</p>
+                </button>
+                <button>
+                    <span className="silver"></span>
+                    <p>Silver</p>
+                </button>
+                <button>
+                    <span className="gold"></span>
+                    <p>Gold</p>
+                </button>
+            </div>
+            <div className="product__price">
+                <p>£ PRICE</p>
+                <p>In stock 
+                    <span className="available"></span>
+                </p>
             </div>
             <div className="product__amount">
                 <button type="button" class="subtractButton" onClick={handleSubtract}>-</button>
                 <div>{count}</div>
                 <button type="button" class="addButton" onClick={handleAdd}>+</button>
+                <button className="product__btn">Add to cart</button>
             </div>
         </div>
     );
