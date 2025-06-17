@@ -1,23 +1,48 @@
+import { useState } from "react";
+import { useLoaderData } from "react-router";
 import "./_ProductAmount.scss";
 
+const initialCount = 0;
+
 export default function ProductAmount() {
-    // Function to handle the amount change when plus or minus is clicked
-    const handleAmountChange = (change) => {
-        // Logic to change the amount
-        // This could involve updating a state variable or calling a function
-        // to update the amount in the basket
-    };
-    // function to add the amount from handleAmountChange to the basket
-    const addToBasket = () => {
-        // Logic to add the current amount to the basket
-        // This could involve updating a state variable or calling a function
-        // to update the basket with the current amount
-    };
+    const [count, setCount] = useState(initialCount);
+    const product = useLoaderData()
+    function handleSubtract() {
+        if (count > 0) {
+            setCount(count - 1);
+        }
+    }
+    function handleAdd() {
+        setCount(count + 1);
+    }
 
     return (
-        <div className="product__amount">
+        <div className="product__choice">
             <div className="product__colors">
-                <p>hej</p>
+                <button>
+                    <span className="black"></span>
+                    <p>Black</p>
+                </button>
+                <button>
+                    <span className="silver"></span>
+                    <p>Silver</p>
+                </button>
+                <button>
+                    <span className="gold"></span>
+                    <p>Gold</p>
+                </button>
+            </div>
+            <div className="product__price">
+                <p>£ {product.price}</p>
+                <p>In stock
+                    <span className="available"></span>
+                </p>
+            </div>
+            <div className="product__amount">
+                <button type="button" class="subtractButton" onClick={handleSubtract}>-</button>
+                <div>{count}</div>
+                <button type="button" class="addButton" onClick={handleAdd}>+</button>
+                <button className="product__btn">Add to cart</button>
             </div>
         </div>
     );
