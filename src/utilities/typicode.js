@@ -19,7 +19,7 @@ export async function getLists() {
     return queryClient.fetchQuery({
         queryKey: ['users'],
         queryFn: async function () {
-            const response = await fetch('https://jsonplaceholder.typicode.com/users')
+            const response = await fetch('https://hifi-api-howz.onrender.com/products')
             if (!response.ok) {
                 throw new Error('Network response was not ok')
             }
@@ -30,7 +30,7 @@ export async function getLists() {
 
 
 export async function getList({ params }) {
-    const response = await fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`)
+    const response = await fetch(`https://hifi-api-howz.onrender.com/products/${params.id}`)
     if (!response.ok) {
         throw new Error('Network response was not ok')
     }
