@@ -4,7 +4,7 @@ import Contact from "./pages/Contact";
 import ProductDetail from "./pages/ProductDetail";
 import Products from "./pages/Products";
 import NotFound from "./pages/NotFound";
-import { getList, getLists } from "./utilities/typicode";
+import { getLists } from "./utilities/typicode";
 import Loading from "./components/loading/Loading";
 import { ErrorBoundary } from "./components/error/ErrorBoundary";
 import Layout from "./Layout";
@@ -27,21 +27,13 @@ const router = createBrowserRouter([
             },
             {
                 path: "products",
-                element: (
-                    // <RequireAuth >
-                        <Products />
-                    // </ RequireAuth>
-                ),
+                element: <Products />,
                 loader: getLists,
             },
             {
                 path: "products/:id",
-                element: (
-                    // <RequireAuth >
-                        <ProductDetail />
-                    // </RequireAuth>
-                ),
-                loader: getList,
+                element: <ProductDetail />,
+                // loader: getList,
             },
             {
                 path: "contact",
