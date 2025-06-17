@@ -10,7 +10,7 @@ export default function CompareThree() {
         <div className="compare-three__product-card">Product 2</div>
         <div className="compare-three__product-card">Product 3</div>
       </div>
-      <Compare className="compare-three__compare" />
+      <Compare style={{ backgroundColor: "orange", padding: "1rem" }} />
     </section>
   )
 }
