@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ProductCard from './components/productCards/ProductCard'
 
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
 
   return (
     <>
-
+    
     </>
   )
 }
