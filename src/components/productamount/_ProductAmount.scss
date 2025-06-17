@@ -1,34 +1,48 @@
 @use "../../style/variables/Colors" as c;
 @use "../../style/placeholders/Buttons";
+
 .product__colors {
     button {
         padding: 0.5rem;
         background-color: transparent;
         border: none;
+        cursor: pointer;
         span {
             display: inline-block;
             width: 1.5rem;
             height: 1.5rem;
             border-radius: 50%;
         }
+        
         .black {
             background-color: c.$black;
+            &:hover {
+                border: 1px solid red;
+            }
         }
+        
         .silver {
-            background-color: c.$silver;
+            background: linear-gradient(c.$silver1 0%,
+            c.$silver2 100%);;
         }
+        
         .gold {
-            background-color: c.$gold;
+            background: linear-gradient(c.$gold1 0%,
+            c.$gold2 100%);
         }
     }
 }
+
 .product__price {
+    padding: 0.5rem;
     display: flex;
     justify-content: space-between;
+    
     p:last-of-type {
         display: flex;
         gap: .5rem;
     }
+
     .available {
         background-color: green;
         display: block;
@@ -37,22 +51,29 @@
         border-radius: 50%;
     }
 }
+
 .product__amount {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0.5rem;
     width: 100%;
     height: 100%;
     padding: 0.5rem;
     gap: .5rem;
+
     button:not(.product__btn) {
-        background-color: c.$light-2-grey;
+        background-color: transparent;
         color: c.$black;
+        cursor: pointer;
         font-size: 1.5rem;
         width: 2.5rem;
         height: 2.5rem;
+        border: none;
     }
+
     .product__btn {
         @extend %button;
+        width: 100%;
     }
 }

@@ -1,11 +1,12 @@
 import { useState } from "react";
+import { useLoaderData } from "react-router";
 import "./_ProductAmount.scss";
 
 const initialCount = 0;
 
 export default function ProductAmount() {
     const [count, setCount] = useState(initialCount);
-
+    const product = useLoaderData()
     function handleSubtract() {
         if (count > 0) {
             setCount(count - 1);
@@ -32,8 +33,8 @@ export default function ProductAmount() {
                 </button>
             </div>
             <div className="product__price">
-                <p>£ PRICE</p>
-                <p>In stock 
+                <p>£ {product.price}</p>
+                <p>In stock
                     <span className="available"></span>
                 </p>
             </div>
