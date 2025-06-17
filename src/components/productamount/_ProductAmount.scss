@@ -1,0 +1,12 @@
+@use "../../style/variables/Colors" as c;
+
+.product__amount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    gap: .5rem;
+
+}
