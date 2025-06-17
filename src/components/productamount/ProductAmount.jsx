@@ -1,29 +1,25 @@
-import { useState } from "react";
 import "./_ProductAmount.scss";
 
 const initialCount = 0;
 
 export default function ProductAmount() {
-    const [count, setCount] = useState(initialCount);
-
-    function handleSubtract() {
-        if (count > 0) {
-            setCount(count - 1);
-        }
-    }
-    function handleAdd() {
-        setCount(count + 1);
-    }
+    // Function to handle the amount change when plus or minus is clicked
+    const handleAmountChange = (change) => {
+        // Logic to change the amount
+        // This could involve updating a state variable or calling a function
+        // to update the amount in the basket
+    };
+    // function to add the amount from handleAmountChange to the basket
+    const addToBasket = () => {
+        // Logic to add the current amount to the basket
+        // This could involve updating a state variable or calling a function
+        // to update the basket with the current amount
+    };
 
     return (
         <div className="product__choice">
             <div className="product__colors">
-
-            </div>
-            <div className="product__amount">
-                <button type="button" class="subtractButton" onClick={handleSubtract}>-</button>
-                <div>{count}</div>
-                <button type="button" class="addButton" onClick={handleAdd}>+</button>
+                <p>hej</p>
             </div>
         </div>
     );
