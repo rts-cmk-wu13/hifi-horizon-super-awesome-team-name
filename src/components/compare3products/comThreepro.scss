@@ -1,0 +1,7 @@
+
+.compare-three__compare {
+  @extend %flex;
+  gap: 0.6rem;
+  justify-content: end;
+  padding: 1rem;
+}

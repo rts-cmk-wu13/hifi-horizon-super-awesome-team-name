@@ -36,11 +36,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "products/:id",
-                element: (
-                    <RequireAuth >
-                        <ProductDetail />
-                    </RequireAuth>
-                ),
+                element: <ProductDetail />,
                 loader: getList,
             },
             {
