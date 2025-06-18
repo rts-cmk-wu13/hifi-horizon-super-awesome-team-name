@@ -1,0 +1,24 @@
+@use "../style/variables/Colors" as c;
+
+.contact {
+    h1 {
+        text-transform: uppercase;
+        font-size: 3rem;
+        font-weight: 600;
+        margin-top: 2.4375rem;
+        margin-bottom: 3.3125rem;
+    }
+
+    &__link {
+        color: c.$orange;
+        text-decoration: none;
+
+    }
+
+    &__text {
+        margin-top: 2.4375rem;
+        margin-bottom: 2.25rem;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}
