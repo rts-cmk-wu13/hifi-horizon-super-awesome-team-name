@@ -1,16 +1,23 @@
 import React from 'react';
+import { Link, useLoaderData } from "react-router";
 import './_productCard.scss';
 
 export default function ProductCard (){
+    const products = useLoaderData();
+
     return (
-        <div className="product-card">
-            <figure className='product-card__figure'>
-            <img className='product-card__img' src="public/Produktbilleder/cd_afspillere/creek_classic_cd.jpg" alt="" />
-            </figure>
-            <h3>Classic CD Player</h3>
-            <p>(2V RMS)</p>
-            <p>4999dkk</p>
-            <button className='product-card__btn'>Read more</button>
+        <div className="products-page ">
+            {products.map(product => (
+                <div className="product-card" key={product.id}>
+                    <figure className='product-card__figure'>
+                        <img className='product-card__img' src={product.image} alt="" />
+                    </figure>
+                    <h3>{product.type}</h3>
+                    <p>{product.output}</p>
+                    <p>£{product.price}</p>
+                    <Link to={`/products/${product.id}`} className='product-card__btn'>Read more</Link>
+                </div>
+            ))}
         </div>
     );
 }
