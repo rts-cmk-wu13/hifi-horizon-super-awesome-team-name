@@ -12,13 +12,16 @@
   &__left {
     @extend %flex;
     // gap: 0;
+    width: 18rem;
     justify-content: start;
-    // background-color: Colors.
+    padding-block: 0.7rem;
+    background-color: Colors.$white;
   }
 
   &__right {
     @extend %flex-column;
     align-items: baseline;
+    padding-inline-start: 0.2rem;
   }
 
   &--price {
