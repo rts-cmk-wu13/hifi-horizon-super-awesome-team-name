@@ -6,7 +6,7 @@ export default function ContactFormula() {
     const errors = useActionData();
 
     return (
-        <Form method="post">
+        <Form method="post" className="contact__form">
             <div>
                 <label htmlFor="name">Full Name <span className="red">*</span></label>
                 <input type="text" name="name" />
