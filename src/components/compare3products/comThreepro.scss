@@ -1,0 +1,35 @@
+@use '../../style/placeholders/Flex.scss';
+@use '../../style/variables/Colors.scss' as Colors;
+
+.compare {
+
+  &-three {
+    @extend %gridTwo;
+    align-items: center;
+    background-color: Colors.$light-2-grey;
+  }
+
+  &__left {
+    @extend %flex;
+    // gap: 0;
+    justify-content: start;
+    // background-color: Colors.
+  }
+
+  &__right {
+    @extend %flex-column;
+    align-items: baseline;
+  }
+
+  &--price {
+    font-weight: 700;
+    align-self: end;
+  }
+
+  &-three__compare {
+    justify-self: end;
+    width: 10rem;
+    background-color: orange;
+    padding: 1rem;
+  }
+}

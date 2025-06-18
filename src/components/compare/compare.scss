@@ -1,0 +1,8 @@
+@use '../../style/placeholders/Flex.scss' as Flex;
+.compare {
+  @extend %flex;
+  gap: 0.6rem;
+  justify-content: end;
+  padding: 1rem;
+}
+

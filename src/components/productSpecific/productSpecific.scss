@@ -1,6 +1,56 @@
 @use '../../../src/style/placeholders/Flex.scss';
+@use '../../../src/style/variables/Colors.scss' as Colors;
 
-.product-specific {
-  @extend %gridTwo;
-  margin-block: 2rem;
+.product {
+
+  &-detail {
+    margin: 1.5rem;
+  }
+  
+  &-specific {
+    @extend %gridTwo;
+    gap: 2rem;
+    margin-block: 2rem;
+  }
+
+  &__left {
+    @extend %flex-column;
+    align-items: stretch;
+  }
+
+
+  &__leftImage {
+    @extend %flex;
+  }
+
+  
+  &-image {
+    width: 70%;
+    height: 50%;
+    margin-inline: auto;
+    align-self: center;
+  }
+
+  &__dots {
+    @extend %flex;
+    gap: 0.5rem;
+    justify-content: center;
+    text-align: center;
+    color: Colors.$grey;
+  }
+
+  &__text {
+    // margin-inline-end: 3rem;
+  }
+
+  &-description {
+    font-size: 0.8rem;
+    margin-block: 2rem;
+  }
+}
+
+.arrow-icon {
+  cursor: pointer;
+  font-size: 2.3rem;
+  color: Colors.$light-2-grey;
 }

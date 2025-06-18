@@ -10,7 +10,6 @@ import { ErrorBoundary } from "./components/error/ErrorBoundary";
 import Layout from "./Layout";
 import { handleSubmit } from "./utilities/actions";
 import Login from "./pages/Login";
-import RequireAuth from "./components/requireauth/RequireAuth";
 import About from "./pages/About";
 import MoreInfo from "./pages/MoreInfo";
  
@@ -34,9 +33,13 @@ const router = createBrowserRouter([
             },
             {
                 path: "products/:id",
+
                 element: (
                         <ProductDetail />
                 ),
+
+                element: <ProductDetail />,
+
                 loader: getList,
             },
             {
