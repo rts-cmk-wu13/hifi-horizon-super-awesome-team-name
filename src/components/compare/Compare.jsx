@@ -1,9 +1,9 @@
 import { FiSliders } from "react-icons/fi";
 
-export default function Compare() {
+export default function Compare({ comStyle }) {
 
   return (
-    <section className="compare">
+    <section className={`compare ${comStyle}`}>
       <p>Compare</p>
       <FiSliders className="compare-icon" />
     </section>
