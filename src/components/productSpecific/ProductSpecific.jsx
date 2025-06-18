@@ -3,6 +3,7 @@ import { MdArrowForwardIos } from "react-icons/md";
 import { FaRegDotCircle } from "react-icons/fa";
 import { FaRegCircle } from "react-icons/fa";
 import ProductAmount from "../productamount/ProductAmount";
+import ProductText from "../productText/ProductText";
 
 export default function ProductSpecific({ product }) {
     console.log("ProductSpecific component rendered with product:", product);
@@ -23,12 +24,16 @@ export default function ProductSpecific({ product }) {
                     <FaRegCircle className="dot-icon" />
                 </div>
             </div>
-            <div className="product__text">
+            <div>
+            <ProductText product={ product }/>
+            <ProductAmount />
+
+            </div>
+            {/* <div className="product__text">
                 <h2>{product.categories}</h2>
                 <p>({product.brand})</p>
                 <p className="product-description">{product.description}</p>
-                <ProductAmount />
-            </div>
+            </div> */}
         </section>
     )
 }
