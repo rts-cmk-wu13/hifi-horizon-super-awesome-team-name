@@ -37,9 +37,9 @@ export default function ProductAmount() {
                 </p>
             </div>
             <div className="product__amount">
-                <button type="button" class="subtractButton" onClick={handleSubtract}>-</button>
+                <button type="button" onClick={handleSubtract}>-</button>
                 <div>{count}</div>
-                <button type="button" class="addButton" onClick={handleAdd}>+</button>
+                <button type="button" onClick={handleAdd}>+</button>
                 <button className="product__btn">Add to cart</button>
             </div>
         </div>
