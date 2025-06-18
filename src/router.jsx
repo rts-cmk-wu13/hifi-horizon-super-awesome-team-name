@@ -12,6 +12,7 @@ import { handleSubmit } from "./utilities/actions";
 import Login from "./pages/Login";
 import About from "./pages/About";
 import MoreInfo from "./pages/MoreInfo";
+import Faq from "./pages/Faq";
  
 const router = createBrowserRouter([
     {
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
             {
                 path: "login",
                 element: <Login />
+            },
+             {
+                path: "faq",
+                element: <Faq />
             },
             {
                 path: "*",

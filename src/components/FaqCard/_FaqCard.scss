@@ -1,0 +1,92 @@
+body{
+    background-color: #F4F4F2;
+}
+
+.faq-card{
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(49, 49, 49, 0.4);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    max-width: 69rem;
+    margin: 1rem;
+
+}
+
+.wrapper{
+    grid-column: fullw;
+    grid-template-columns: 
+    [fullw-start]1.5rem 
+    [content-start] 1fr [content-end] 
+    1.5rem[fullw-end];
+}
+
+@media screen and (width >= 37.5rem){
+    .wrapper{
+        grid-template-columns: 
+        [fullw-start]1.5rem 
+        [content-start] 1fr 1fr [content-end] 
+         1.5rem[fullw-end];
+    }
+}
+
+@media screen and (width >= 64rem){
+    .wrapper{
+        grid-template-columns: 
+        [fullw-start]1fr 
+        [content-start] repeat(3, 20rem) [content-end] 
+         1fr[fullw-end];
+    }
+}
+
+header, main, footer{
+    grid-column: fullw;
+    display: grid;
+    grid-template-columns: subgrid;
+}
+
+header > *,
+main > *,
+footer > *{
+    grid-column: content;
+    display: grid;
+    grid-template-columns: subgrid;
+}
+
+.columns{
+    grid-column: content;
+    display: grid;
+    grid-template-columns: subgrid;
+    gap: 1.5rem;
+}
+
+.no-columns{
+    grid-column: content;
+    display: block;
+}
+
+p{
+    font-size: smaller;
+}
+
+p + p{
+    margin-top: 1.5rem;
+}
+
+.margin-top{
+    margin-top: 1.5rem;
+}
+
+.margin-block{
+    margin-block: 1.5rem;
+}
+h2{
+    font-weight: 300;
+    font-size: 1.55rem;
+    line-height: 1.2;
+}
+
+h1{
+    font-weight: 500;
+    margin-left: 1rem;
+}
