@@ -6,6 +6,7 @@ export default function About() {
     return (
         <section className="about">
             <h1 className="about__header">our history</h1>
+            <div className="about__content">
                 <AboutCard
                     header="History"
                     subheader="Established in the late 1960s, our family owned business is based in Edinburgh and Falkirk, but services customers across the UK."
@@ -34,6 +35,7 @@ export default function About() {
                     img="public/Aboutbilleder/tailored-for-you.png"
                     alt="Speakers lined up in a row zoomed in on the speaker cones."
                 />
+            </div>
         </section>
     )
 }

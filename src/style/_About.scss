@@ -3,10 +3,22 @@
 .about {
     width: 93.7%;
     margin: 2.25rem auto;
+
     &__header {
         font-size: 3rem;
         text-transform: uppercase;
-        
-        color: c.$darkGray;
+        padding-bottom: 3.3125rem;
+        color: c.$dark-grey;
+        margin-left: 0;
+    }
+
+    &__content {
+        background-color: c.$white;
+        padding: 1.625rem 2.3125rem;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+        .about__card:nth-child(2n) {
+            flex-direction: row-reverse;
+        }
     }
 }
