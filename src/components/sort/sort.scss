@@ -1,0 +1,11 @@
+
+.products__sort {
+  width: 10rem;
+  margin-block-start: 1rem;
+  padding: 0.3rem;
+  
+  .form {
+    display: flex;
+    justify-content: space-between;
+  }
+}
