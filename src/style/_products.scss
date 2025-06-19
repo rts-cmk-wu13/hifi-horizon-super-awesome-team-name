@@ -12,4 +12,9 @@
     &-page{
         @extend %gridThree;
     }
+
+    &__main {
+        @extend %flex;
+        align-items: start;
+    }
 }
