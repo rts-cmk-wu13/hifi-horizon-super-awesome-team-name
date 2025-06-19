@@ -1,8 +1,13 @@
-body{
+body {
     background-color: #F4F4F2;
 }
 
-.faq-card{
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.faq-card {
     background-color: white;
     padding: 2rem;
     box-shadow: 0 4px 8px rgba(49, 49, 49, 0.4);
@@ -13,66 +18,61 @@ body{
 
 }
 
-.wrapper{
+.wrapper {
     grid-column: fullw;
-    grid-template-columns: 
-    [fullw-start]1.5rem 
-    [content-start] 1fr [content-end] 
-    1.5rem[fullw-end];
+    grid-template-columns:
+        [fullw-start]1.5rem [content-start] 1fr [content-end] 1.5rem[fullw-end];
 }
 
-@media screen and (width >= 37.5rem){
-    .wrapper{
-        grid-template-columns: 
-        [fullw-start]1.5rem 
-        [content-start] 1fr 1fr [content-end] 
-         1.5rem[fullw-end];
+@media screen and (width >=37.5rem) {
+    .wrapper {
+        grid-template-columns:
+            [fullw-start]1.5rem [content-start] 1fr 1fr [content-end] 1.5rem[fullw-end];
     }
 }
 
-@media screen and (width >= 64rem){
-    .wrapper{
-        grid-template-columns: 
-        [fullw-start]1fr 
-        [content-start] repeat(3, 20rem) [content-end] 
-         1fr[fullw-end];
+@media screen and (width >=64rem) {
+    .wrapper {
+        grid-template-columns:
+            [fullw-start]1fr [content-start] repeat(3, 20rem) [content-end] 1fr[fullw-end];
     }
 }
 
-.columns{
+.columns {
     grid-column: content;
     display: grid;
     grid-template-columns: subgrid;
     gap: 1.5rem;
 }
 
-.no-columns{
+.no-columns {
     grid-column: content;
     display: block;
 }
 
-p{
+p {
     font-size: smaller;
 }
 
-p + p{
+p+p {
     margin-top: 1.5rem;
 }
 
-.margin-top{
+.margin-top {
     margin-top: 1.5rem;
 }
 
-.margin-block{
+.margin-block {
     margin-block: 1.5rem;
 }
-h2{
+
+h2 {
     font-weight: 300;
     font-size: 1.55rem;
     line-height: 1.2;
 }
 
-h1{
+h1 {
     font-weight: 500;
     margin-left: 21%;
     color: #495464;

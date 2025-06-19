@@ -1,11 +1,15 @@
-
+import { useState } from 'react';
 import Navigation from "../navigation/Navigation"
 import Logo from "../logo/Logo"
 import { FaUser } from "react-icons/fa";
 import { IoMdCart } from "react-icons/io";
-import { IoSearchOutline } from "react-icons/io5";
+import { FaSearch } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function Header() {
+
+    const [showMenu, setShowMenu] = useState(false);
+    console.log(showMenu);   
 
     return (
         <header className="header">
@@ -16,7 +20,7 @@ export default function Header() {
             <div className="header__searchUserCart">
                 <div className="header__search">
                     <input type="text" name="search" id="search" placeholder="Search product..." />
-                    <IoSearchOutline />
+                    <FaSearch className="clr"/>
                 </div>
                 <div className="header__user">
                     <FaUser color="white" />
@@ -24,7 +28,12 @@ export default function Header() {
                 <div className="header__cart">
                     <IoMdCart color="white" />
                 </div>
+                <GiHamburgerMenu color="white" className="hamburger" onClick={() => setShowMenu(true)}/>
             </div>
+            {showMenu && (<div className="header--mobile">
+            <Logo />
+            <Navigation className="mobile--navigation" />
+            </div>)}
         </header>
     )
 }
