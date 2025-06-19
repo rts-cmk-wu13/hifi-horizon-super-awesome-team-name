@@ -4,7 +4,8 @@
 .logo {
   position: relative;
   background-color: transparent;
-  width: 2rem;
+  width: 4rem;
+  height: 3rem;
   padding: 0.8rem;
   border: 0.01rem solid colors.$white;
 
@@ -14,10 +15,10 @@
     transform: translateY(50%);
     left: 0;  
     color: colors.$white;
-    font-size: 0.5rem;
+    font-size: 0.75rem;
     font-weight: 600;
     width: 0.2rem;
-    line-height: 0.5rem;
+    line-height: 0.8rem;
     color: colors.$white;
   }
 }
