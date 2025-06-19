@@ -1,28 +1,66 @@
+@use '../../../src/style/placeholders/Flex.scss';
+
+.products__card {
+    @extend %gridThree;
+}
 
 .product-card{
+    max-width: 12rem;
+    margin-inline: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: rgb(255, 255, 255);
     padding: 1rem;
-    padding-top: 3rem;
     box-shadow: 0 4px 8px rgba(49, 49, 49, 0.4);
-    border-radius: 2%;
+    border-radius: 2%;    
+}
+
+p {
+    margin-top: 0;
+}
+
+.product--cardpara {
+    margin-block: 0.5rem;
+}
+
+.product-card__figure {
+    margin-block: 0.9rem;
 }
 
 .product-card__img{
-    width: 100%;
+    max-width: 7rem;
     height: auto;
-    object-fit: contain;
-    max-width: 100%;
+}
+
+.addStock {
+    @extend %flex;
+    gap: 0.5rem;
+}
+
+.stockCircle {
+    @extend %flex;
+
+    & p {
+        margin-inline-end: 0.5rem;
+    }
 }
 
 .product-card__btn{
     background-color: #ff6900;
     color: white;
     border-radius: 0.25rem;
-    padding: 0.75rem;
+    padding: 0.5rem;
     font-size: small;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+.stock--circle {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background-color: green;
+    display: inline-block;
+}
+
