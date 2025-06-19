@@ -5,11 +5,16 @@ import { FaUser } from "react-icons/fa";
 import { IoMdCart } from "react-icons/io";
 import { FaSearch } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
+import ShoppingCart from "../header/shoppingcart/ShoppingCart";
 
 export default function Header() {
+const [showMenu, setShowMenu] = useState(false);
+const [isCartOpen, setIsCartOpen] = useState(false);
+console.log(showMenu);   
 
-    const [showMenu, setShowMenu] = useState(false);
-    console.log(showMenu);   
+ const toggleCart = () => {
+        setIsCartOpen(!isCartOpen);
+    };
 
     return (
         <header className="header">
@@ -25,8 +30,9 @@ export default function Header() {
                 <div className="header__user">
                     <FaUser color="white" />
                 </div>
-                <div className="header__cart">
+                <div className="header__cart" onClick={toggleCart}>
                     <IoMdCart color="white" />
+                    <ShoppingCart isOpen={isCartOpen} />
                 </div>
                 <GiHamburgerMenu color="white" className="hamburger" onClick={() => setShowMenu(true)}/>
             </div>
