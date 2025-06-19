@@ -11,8 +11,8 @@ export default function FaQ() {
         <h1 className="margin-block">FAQ</h1>
         <section className="wrapper">
         <FaqCard />
-
         </section>
+        
         </>
     )
 }
