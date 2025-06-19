@@ -1,12 +1,14 @@
-import { useLoaderData } from "react-router";
+import CompareThree from "../components/compare3products/CompareThree";
+import Product from "../components/product/Product";
+import ProductTable from "../components/productTable/ProductTable";
 
 export default function ProductDetail() {
     
-   const list = useLoaderData()
-
     return (
-        <>
-        <h2>{list.name}</h2>
-        </>
+        <section className="product-detail">
+            <Product />
+            <ProductTable />
+            <CompareThree />
+        </section>
     )
 }

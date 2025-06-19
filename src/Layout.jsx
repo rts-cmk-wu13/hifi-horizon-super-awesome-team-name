@@ -12,9 +12,7 @@ export default function Layout() {
       <Outlet />
       </main>
 
-      <Footer 
-      copyright="2025 My App"
-      />
+      <Footer />
     </>
   )
 }

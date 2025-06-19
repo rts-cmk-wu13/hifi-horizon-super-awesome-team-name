@@ -10,10 +10,11 @@ import { ErrorBoundary } from "./components/error/ErrorBoundary";
 import Layout from "./Layout";
 import { handleSubmit } from "./utilities/actions";
 import Login from "./pages/Login";
-import RequireAuth from "./components/requireauth/RequireAuth";
 import About from "./pages/About";
 import MoreInfo from "./pages/MoreInfo";
+import FaQ from "./pages/FaQ";
 
+ 
 const router = createBrowserRouter([
     {
         path: "/",
@@ -28,19 +29,19 @@ const router = createBrowserRouter([
             {
                 path: "products",
                 element: (
-                    <RequireAuth >
                         <Products />
-                    </ RequireAuth>
                 ),
                 loader: getLists,
             },
             {
                 path: "products/:id",
+
                 element: (
-                    <RequireAuth >
                         <ProductDetail />
-                    </RequireAuth>
                 ),
+
+                element: <ProductDetail />,
+
                 loader: getList,
             },
             {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
                 path: "login",
                 element: <Login />
             },
+             {
+                path: "faq",
+                element: <FaQ />
+            },
             {
                 path: "*",
                 element: <NotFound />
@@ -67,8 +72,5 @@ const router = createBrowserRouter([
         ]
     }
 ])
-
+ 
 export default router
-
-
-

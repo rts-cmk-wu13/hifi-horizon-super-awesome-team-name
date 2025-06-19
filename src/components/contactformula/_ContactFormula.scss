@@ -1,0 +1,37 @@
+@use "../../style/variables/Colors" as c;
+@use "../../style/placeholders/Buttons";
+
+.contact__form {
+    background-color: c.$white;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 2.875rem;
+    display: flex;
+    flex-direction: column;
+    width: 93.7%;
+    margin: 0 auto;
+    .red {
+        color: red;
+    }
+    div {
+        display: flex;
+        flex-direction: column ;
+        margin: .8rem 0;
+    }
+    textarea, input {
+        background-color: c.$light-2-grey;
+        border-radius: 2px;
+        border: none;
+        padding: 0.5rem;
+    }
+    input {
+        width: 75%;
+    }
+    textarea {
+        width: 100%;
+    }
+    button {
+        @extend %button;
+        padding: 0.5rem 2rem;
+        align-self: end;
+    }
+}
