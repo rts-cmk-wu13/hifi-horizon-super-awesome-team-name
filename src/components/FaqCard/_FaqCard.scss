@@ -4,7 +4,10 @@ body{
 
 .wrapper{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    width: 93.7%;
+    margin: 2.25rem auto;
 }
 
 .faq-card{
@@ -14,7 +17,6 @@ body{
     margin-bottom: 1rem;
     line-height: 1.5;
     max-width: 69rem;
-    margin: 1rem;
 
 }
 
@@ -41,5 +43,4 @@ h2{
 
 h1{
     font-weight: 500;
-    margin-left: 21%;
 }
