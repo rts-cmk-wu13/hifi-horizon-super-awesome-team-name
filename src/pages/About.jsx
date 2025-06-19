@@ -1,3 +1,4 @@
+import ChatFunction from "../components/chatFunction/ChatFunction";
 import AboutCard from "../components/about/AboutCard"
 import "../style/_About.scss";
 

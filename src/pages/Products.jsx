@@ -3,13 +3,11 @@ import ProductCard from './../components/productCard/ProductCard';
 
 export default function ProductsPage() {
     return (
-        <div className='products-wrapper'>
-            <div>
-                <p>hallo</p>
+        <section className='products'>
+            <h3 className="products--header">PRODUCTS</h3>
+            <div className="products__main">
+                <ProductCard />
             </div>
-            <ProductCard />
-        </div>
-            
-
+        </section>  
     );
 }
