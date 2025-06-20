@@ -1,15 +1,21 @@
 import { useState } from 'react';
-import Navigation from "../navigation/Navigation"
-import Logo from "../logo/Logo"
+import Navigation from "../navigation/Navigation";
+import Logo from "../logo/Logo";
 import { FaUser } from "react-icons/fa";
 import { IoMdCart } from "react-icons/io";
 import { FaSearch } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { IoClose } from "react-icons/io5";
 
 export default function Header() {
 
     const [showMenu, setShowMenu] = useState(false);
-    console.log(showMenu);   
+    const [active, setActive] = useState(false);
+    // console.log(showMenu);   
+
+    const handleClick = () => {
+     setActive(!active);
+    };
 
     return (
         <header className="header">
@@ -20,7 +26,10 @@ export default function Header() {
             <div className="header__searchUserCart">
                 <div className="header__search">
                     <input type="text" name="search" id="search" placeholder="Search product..." />
-                    <FaSearch className="clr"/>
+                    <FaSearch 
+                        onClick={handleClick}
+                        style={{ color: active ? 'red' : 'white', cursor: 'pointer' }}
+                    />
                 </div>
                 <div className="header__user">
                     <FaUser color="white" />
@@ -28,12 +37,17 @@ export default function Header() {
                 <div className="header__cart">
                     <IoMdCart color="white" />
                 </div>
-                <GiHamburgerMenu color="white" className="hamburger" onClick={() => setShowMenu(true)}/>
+                <GiHamburgerMenu color="white" className="hamburger" onClick={() => setShowMenu(true)}/>                
             </div>
-            {showMenu && (<div className="header--mobile">
-            <Logo />
-            <Navigation className="mobile--navigation" />
-            </div>)}
+            {showMenu && (
+                <>
+                <IoClose color="red"  onClick={() => setShowMenu(false)} className="closeIcon"/>
+                <div className="header--mobile">
+                    <Logo />
+                    <Navigation className="mobile--navigation" />
+                </div>
+                </>
+            )}
         </header>
     )
 }

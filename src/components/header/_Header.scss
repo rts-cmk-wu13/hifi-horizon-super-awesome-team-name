@@ -50,6 +50,7 @@
   background-color: colors.$black;
   padding: 2rem;
   height: 14rem;
+  display: none;
 }
 
 .mobile--navigation {
@@ -61,24 +62,35 @@
   display: block;
 }
 
+.closeIcon {
+  font-size: 1.8rem;
+  position: absolute;
+  top: 2px;
+  right: 6%;
+  background-color: black;
+  display: none;
+}
+
 @media (max-width: 768px) {
+  
   .header__logoNav, input[name="search"] {
     display: none;
+  }
+
+  .closeIcon, .header--mobile {
+    display: block;
   }
 
   .header__search {
     background-color: colors.$black;
   }
-
   .header__searchUserCart {
     width: 90%;
     margin-inline: auto;
   }
-
   .clr {
     color: colors.$white;
   }
-  
   .hamburger {
     display: inline-flex;
   }
