@@ -36,7 +36,7 @@ export default function Nyhed() {
   };
 
   return (
-    <section>
+    <section className="nyhed-section">
       <div className="nyhed">
         <h3>SIGN UP FOR OUR NEWSLETTER</h3>
         <p>

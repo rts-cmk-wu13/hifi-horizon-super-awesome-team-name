@@ -1,11 +1,19 @@
 @use "../../style/variables/Colors" as Colors;
 @use "../../style/placeholders/Flex";
 
+.nyheds-section{
+  background-color: grey;
+}
+
 .nyhed {
   @extend %flex-column;
-  width: 80%;
+  width: 90%;
   margin: 2rem auto;
+  padding: 1.5rem;
+  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   text-align: center;
+  
   
     h3 {
       font-size: 1.5rem;
@@ -52,7 +60,7 @@
       border: none;
       border-radius: 0.1rem;
       color: #000000;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     }
 
     .nyhed-btn {
@@ -62,6 +70,7 @@
       color: Colors.$white;
       background-color: Colors.$orange;
       border: none;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
   
 }
