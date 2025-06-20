@@ -8,6 +8,9 @@
 @use "./style/mixins/Font-mixin";
 @use "./components/hero/hero.scss";
 @use "./components/nyhedsbrev/nyhed.scss";
+
+
+@use "./components/sort/sort.scss";
 @use "./components/productSpecific/productSpecific.scss";
 @use "./components/productCard/ProductCard.scss";
 
@@ -44,3 +47,15 @@ img {
   object-fit: cover;
 }
 
+body{
+    background-color: #F4F4F2;
+}
+
+.dolars--clr {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.margin-top{
+  margin-top: 5rem;
+}

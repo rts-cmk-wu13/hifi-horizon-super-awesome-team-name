@@ -34,8 +34,9 @@ export default function Header() {
                 <div className="header__user">
                     <FaUser color="white" />
                 </div>
-                <div className="header__cart">
+                <div className="header__cart" onClick={toggleCart}>
                     <IoMdCart color="white" />
+                    <ShoppingCart isOpen={isCartOpen} />
                 </div>
                 <GiHamburgerMenu color="white" className="hamburger" onClick={() => setShowMenu(true)}/>                
             </div>
@@ -48,6 +49,12 @@ export default function Header() {
                 </div>
                 </>
             )}
+
+            {/* {active && (
+                <>
+                    <input type="text" name="search" id="search" placeholder="Search product..." />
+                </>
+            )} */}
         </header>
     )
 }
