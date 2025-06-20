@@ -1,11 +1,17 @@
 @use "../../style/variables/Colors" as Colors;
 @use "../../style/placeholders/Flex";
 
+
+
 .nyhed {
   @extend %flex-column;
-  width: 80%;
+  width: 90%;
   margin: 2rem auto;
+  padding: 1.5rem;
+  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   text-align: center;
+  
   
     h3 {
       font-size: 1.5rem;
@@ -26,15 +32,33 @@
     margin: 2rem;
     } 
 
+.nyhed-popup {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.nyhed-popup-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+
     input[type="email"] {
       margin-inline-end: 0.3rem;
       width: 20rem;
       padding-block: 0.7rem;
+      padding-inline: 0.5rem;
       background-color: Colors.$light-2-grey;
       border: none;
       border-radius: 0.1rem;
-      color: #E8E8E8;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      color: #000000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     }
 
     .nyhed-btn {
@@ -44,6 +68,7 @@
       color: Colors.$white;
       background-color: Colors.$orange;
       border: none;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
   
 }
