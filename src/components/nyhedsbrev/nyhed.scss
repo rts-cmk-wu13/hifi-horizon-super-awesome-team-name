@@ -1,9 +1,7 @@
 @use "../../style/variables/Colors" as Colors;
 @use "../../style/placeholders/Flex";
 
-.nyheds-section{
-  background-color: grey;
-}
+
 
 .nyhed {
   @extend %flex-column;
