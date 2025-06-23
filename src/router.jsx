@@ -4,7 +4,7 @@ import Contact from "./pages/Contact";
 import ProductDetail from "./pages/ProductDetail";
 import Products from "./pages/Products";
 import NotFound from "./pages/NotFound";
-import { getList, getLists } from "./utilities/typicode";
+import { getAbout, getList, getLists } from "./utilities/typicode";
 import Loading from "./components/loading/Loading";
 import { ErrorBoundary } from "./components/error/ErrorBoundary";
 import Layout from "./Layout";
@@ -13,7 +13,6 @@ import Login from "./pages/Login";
 import About from "./pages/About";
 import MoreInfo from "./pages/MoreInfo";
 import FaQ from "./pages/FaQ";
-
  
 const router = createBrowserRouter([
     {
@@ -51,7 +50,8 @@ const router = createBrowserRouter([
             },
             {
                 path: "about",
-                element: <About />
+                element: <About />,
+                loader: getAbout,
             },
             {
                 path: "info",
