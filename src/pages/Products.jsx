@@ -8,7 +8,7 @@ export default function ProductsPage() {
             <h3 className="products--header">PRODUCTS</h3>
             <div className="products__main">
                 <Sort />
-                <ProductCard />
+                {/* <ProductCard /> */}
             </div>
         </section>  
     );

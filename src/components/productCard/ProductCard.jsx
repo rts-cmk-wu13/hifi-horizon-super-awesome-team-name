@@ -4,7 +4,8 @@ import Compare from '../../components/compare/Compare'
 import './_productCard.scss';
 
 export default function ProductCard (){
-    const products = useLoaderData();
+    // const products = useLoaderData();
+    
 
     return (
         <section className="products__card">
