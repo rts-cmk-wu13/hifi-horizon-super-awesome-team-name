@@ -16,5 +16,6 @@
     &__main {
         @extend %flex;
         align-items: start;
+        gap: 1.3rem;
     }
 }

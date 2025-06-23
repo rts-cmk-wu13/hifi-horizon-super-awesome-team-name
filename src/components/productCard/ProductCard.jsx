@@ -10,7 +10,7 @@ export default function ProductCard (){
         <section className="products__card">
             {products.map(product => (
                 <div className="product-card" key={product.id}>
-                    <Compare className=""/>
+                    <Compare comStyle="comStyle"/>
                     <figure className='product-card__figure'>
                         <img className='product-card__img' src={product.image} alt="" />
                     </figure>
