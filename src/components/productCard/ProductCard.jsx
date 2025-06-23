@@ -4,7 +4,8 @@ import './_productCard.scss';
 import './_PopularProductCard.scss';
 
 export default function ProductCard (){
-    const products = useLoaderData();
+    // const products = useLoaderData();
+    
 
     return (
         <section className="products__card">
