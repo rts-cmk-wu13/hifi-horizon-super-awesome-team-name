@@ -30,7 +30,7 @@
 
 html, body {
   font-family: Font-mixin.$base-font;
-  
+  background-color: #f4f4f2;
 }
 
 ul {
@@ -47,10 +47,6 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.nyheds-section{
-  background-color: grey;
 }
 
 .dolars--clr {
