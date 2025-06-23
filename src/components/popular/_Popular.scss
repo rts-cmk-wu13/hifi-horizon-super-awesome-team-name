@@ -1,0 +1,26 @@
+@use "../../style/variables/Colors" as c;
+@use "../../style/placeholders/Buttons";
+
+.popular {
+    padding: 2rem;
+    &__header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 2rem;
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: c.$dark-grey;
+            text-transform: uppercase;
+        }
+        &__btn {
+            @extend %button;
+        }
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));    }
+
+}
