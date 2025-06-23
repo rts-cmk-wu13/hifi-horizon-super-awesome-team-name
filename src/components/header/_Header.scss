@@ -51,11 +51,12 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 5%;
+  top: 10%;
   right: 0;
   background-color: colors.$black;
   padding: 2rem;
   height: 14rem;
+  display: none;
 }
 
 .mobile--navigation {
@@ -65,27 +66,41 @@
 
 .header--mobile nav ul {
   display: block;
+  margin-block-start: 1rem;
+}
+
+.closeIcon {
+  font-size: 1.8rem;
+  position: absolute;
+  top: 3.5%;
+  right: 5%;
+  background-color: black;
+  display: none;
+  z-index: 999;
+  width: 4rem;
 }
 
 @media (max-width: 768px) {
+  
   .header__logoNav, input[name="search"] {
     display: none;
+  }
+
+  .closeIcon, .header--mobile {
+    display: block;
   }
 
   .header__search {
     background-color: colors.$black;
   }
-
   .header__searchUserCart {
     width: 90%;
     margin-inline: auto;
     
   }
-
   .clr {
     color: colors.$white;
   }
-  
   .hamburger {
     display: inline-flex;
   }
