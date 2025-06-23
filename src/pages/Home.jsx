@@ -6,12 +6,12 @@ import Popular from "../components/popular/Popular";
 
 export default function Home() {
     return (
-        <>
+        <div className="home-container">
             <Hero />
-            <Popular />
+            {/* <Popular /> */}
             <Homeinfo />
             <Nyhed />
             <ChatFunction />
-        </>
+        </div>
     )
 }
