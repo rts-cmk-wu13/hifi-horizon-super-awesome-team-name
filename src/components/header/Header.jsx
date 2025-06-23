@@ -34,15 +34,16 @@ export default function Header() {
                 <div className="header__user">
                     <FaUser color="white" />
                 </div>
-                <div className="header__cart" onClick={toggleCart}>
+                {/* <div className="header__cart" onClick={toggleCart}>
                     <IoMdCart color="white" />
                     <ShoppingCart isOpen={isCartOpen} />
-                </div>
+                </div> */}
                 <GiHamburgerMenu color="white" className="hamburger" onClick={() => setShowMenu(true)}/>                
             </div>
             {showMenu && (
                 <>
                 <IoClose color="red"  onClick={() => setShowMenu(false)} className="closeIcon"/>
+                {/* <GiHamburgerMenu color="white" className="hamburger" onClick={() => setShowMenu(false)}/>                 */}
                 <div className="header--mobile">
                     <Logo />
                     <Navigation className="mobile--navigation" />
