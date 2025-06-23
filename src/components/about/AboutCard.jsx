@@ -1,19 +1,26 @@
+import { useLoaderData } from "react-router";
 import "./_AboutCard.scss";
 
-export default function AboutCard({ header, subheader, text, img, alt }) {
+export default function AboutCard() {
+    const abouts = useLoaderData();
+
     return (
-        <div className="about__card">
-            <img src={img} alt={alt} />
-            <section>
-                <h2>{header}</h2>
-                <h3>{subheader}</h3>
-                {Array.isArray(text) ?
-                    text.map((paragraph, index) => (
-                        <p key={index}>{paragraph}</p>
-                    )) :
-                    <p>{text}</p>
-                }
-            </section>
-        </div>
+        <>
+            {abouts.map(about => (
+                <div key={about.id} className="about__card">
+                    <img src={about.image} alt="" />
+                    <section>
+                        <h2>{about.title}</h2>
+                        <h3>{about.catchfrase}</h3>
+                        {Array.isArray(about.text?.paragraphs) ?
+                            about.text.paragraphs.map((paragraph, index) => (
+                                <p key={index}>{paragraph}</p>
+                            )) :
+                            <p>{about.text?.paragraphs}</p>
+                        }
+                    </section>
+                </div>
+            ))}
+        </>
     )
 }
