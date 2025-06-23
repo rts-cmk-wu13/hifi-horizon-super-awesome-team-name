@@ -1,26 +1,26 @@
 import { useLoaderData } from "react-router";
 import "./_AboutCard.scss";
 
-export default function AboutCard({ alt }) {
-    const aboutContent = useLoaderData();
+export default function AboutCard() {
+    const abouts = useLoaderData();
 
     return (
-        <div className="about__card">
-            {aboutContent.map(about => (
-                <>
-                    <img src={about.image} alt={alt} />
+        <>
+            {abouts.map(about => (
+                <div key={about.id} className="about__card">
+                    <img src={about.image} alt="" />
                     <section>
                         <h2>{about.title}</h2>
                         <h3>{about.catchfrase}</h3>
-                        {Array.isArray(about.text) ?
-                            about.text.map((paragraph, index) => (
+                        {Array.isArray(about.text?.paragraphs) ?
+                            about.text.paragraphs.map((paragraph, index) => (
                                 <p key={index}>{paragraph}</p>
                             )) :
-                            <p>{about.text}</p>
+                            <p>{about.text?.paragraphs}</p>
                         }
                     </section>
-                </>
+                </div>
             ))}
-        </div>
+        </>
     )
 }
