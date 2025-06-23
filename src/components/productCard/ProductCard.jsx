@@ -1,7 +1,7 @@
-import React from 'react';
 import { Link, useLoaderData } from "react-router";
 import Compare from '../../components/compare/Compare'
 import './_productCard.scss';
+import './_PopularProductCard.scss';
 
 export default function ProductCard (){
     const products = useLoaderData();
