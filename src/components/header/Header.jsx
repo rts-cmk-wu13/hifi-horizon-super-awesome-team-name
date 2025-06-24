@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLoaderData } from 'react-router';
 import Navigation from "../navigation/Navigation";
 import Logo from "../logo/Logo";
 import { FaUser } from "react-icons/fa";
@@ -13,7 +14,16 @@ export default function Header() {
     const [showMenu, setShowMenu] = useState(false);
     const [active, setActive] = useState(false);
     const [isCartOpen, setIsCartOpen] = useState(false);
-    console.log(showMenu);   
+    const [search, setSearch] = useState("");
+    console.log(search);
+
+    const searchData = useLoaderData();
+    console.log(searchData);
+    
+    const handleChange = e => {
+        setSearch(e.target.value)
+    }
+    // console.log(showMenu);   
  
     const toggleCart = () => {
         setIsCartOpen(!isCartOpen);
@@ -32,11 +42,27 @@ export default function Header() {
             </div>
             <div className="header__searchUserCart">
                 <div className="header__search">
-                    <input type="text" name="search" id="search" placeholder="Search product..." />
+                    <input 
+                        type="text" 
+                        name="search" 
+                        id="search" 
+                        placeholder="Search product..." 
+                        onChange={handleChange}
+                        onClick={handleClick}
+                    />
                     <FaSearch 
                         onClick={handleClick}
                         style={{ color: active ? 'red' : 'white', cursor: 'pointer' }}
                     />
+                    <div className="searchShow">
+                        {active && searchData && searchData
+                        .filter((itm) => 
+                            search.trim() !== '' && itm.type.toLowerCase().includes(search.toLowerCase())
+                        )
+                        .map((itm) => (                        
+                            <p key={itm.id}>{itm.type}</p>
+                        ))}
+                    </div>
                 </div>
                 <div className="header__user">
                     <FaUser color="white" />
@@ -44,12 +70,12 @@ export default function Header() {
                 <div className="header__cart"
                  onClick={toggleCart}
                  >
-
                     <IoMdCart color="white" />
                     <ShoppingCart isOpen={isCartOpen} />
                 </div>
                 <GiHamburgerMenu color="white" className="hamburger" onClick={() => setShowMenu(true)}/>                
             </div>
+
             {showMenu && (
                 <>
                 <IoClose color="red"  onClick={() => setShowMenu(false)} className="closeIcon"/>

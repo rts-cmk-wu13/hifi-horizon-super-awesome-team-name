@@ -18,6 +18,7 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <Layout />,
+        loader: getLists,
         hydrateFallbackElement: <Loading />,
         errorElement: <ErrorBoundary />,
         children: [
