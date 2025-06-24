@@ -4,8 +4,9 @@
     background-color: c.$black;
     padding: 6.8rem 2.9rem 4.625rem;
     display: flex;
-    gap: 10rem;
+    gap: 5rem;
     line-height: 1.5;
+    flex-wrap: wrap-reverse;
     h2 {
         color: c.$white;
         font-size: 1.5rem;
@@ -21,9 +22,9 @@
         margin-bottom: 1rem;
     }
     section:first-of-type {
-        flex: 2;
+        flex: 2 1 25rem;
     }
     section:last-of-type {
-        flex: 1;
+        flex: 1 1 19rem;
     }
 }
