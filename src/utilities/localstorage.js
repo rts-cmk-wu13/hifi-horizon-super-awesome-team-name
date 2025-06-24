@@ -4,7 +4,7 @@
  * @param {string | number | boolean | object | any[]} value - value to be saved
  * @returns {string}
  */
-function saveToLocalStorage(key, value){
+export function saveToLocalStorage(key, value){
     localStorage.setItem(key, JSON.stringify(value))
     return "Data was saved with the key" + key
 }
@@ -13,7 +13,7 @@ function saveToLocalStorage(key, value){
  * @param {string} key - key to be read from Local Storage 
  * @returns {string | number | boolean | object | any[]}
  */
-function readFromLocalStorage(key) {
+export function readFromLocalStorage(key) {
     return JSON.parse(localStorage.getItem(key))
 }
 /**
@@ -21,7 +21,7 @@ function readFromLocalStorage(key) {
  * @param {string} key 
  * @returns {string | number | boolean | object | any[]}
  */
-function deleteFromLocalStorage(key) {
+export function deleteFromLocalStorage(key) {
     localStorage.removeItem(key)
     return "The element with key" + key + "was deleted.";
 }

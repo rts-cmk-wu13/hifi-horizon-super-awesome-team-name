@@ -7,14 +7,17 @@ import { QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import queryClient from './utilities/queryClient'
 import AuthProvider from './contexts/AuthContext'
+import { CartProvider } from './components/header/shoppingcart/CartContext'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>
-      <QueryClientProvider client={queryClient}>
-        <RouterProvider router={router} />
-        <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
-      </QueryClientProvider>
+      <CartProvider> {/* <-- Wrap everything here */}
+        <QueryClientProvider client={queryClient}>
+          <RouterProvider router={router} />
+          <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
+        </QueryClientProvider>
+      </CartProvider>
     </AuthProvider>
   </StrictMode>,
 )
