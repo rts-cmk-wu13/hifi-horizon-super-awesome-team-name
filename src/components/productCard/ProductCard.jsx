@@ -3,13 +3,12 @@ import Compare from '../../components/compare/Compare'
 import './_productCard.scss';
 import './_PopularProductCard.scss';
 
-export default function ProductCard (){
+export default function ProductCard ({filteredList}){
     // const products = useLoaderData();
-    
 
     return (
         <section className="products__card">
-            {products.map(product => (
+            {filteredList.map(product => (
                 <div className="product-card" key={product.id}>
                     <Compare comStyle="comStyle"/>
                     <figure className='product-card__figure'>
@@ -28,6 +27,11 @@ export default function ProductCard (){
                     </div>
                 </div>
             ))}
+            {filteredList.length === 0 && (
+          <div className="text-center text-gray-500 mt-4">
+            Sorry, no products match your filters.
+          </div>
+        )}
         </section>
     );
 }
