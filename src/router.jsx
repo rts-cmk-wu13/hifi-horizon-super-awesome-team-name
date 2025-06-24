@@ -28,20 +28,12 @@ const router = createBrowserRouter([
             },
             {
                 path: "products",
-                element: (
-                        <Products />
-                ),
+                element: <Products />,
                 loader: getLists,
             },
             {
                 path: "products/:id",
-
-                element: (
-                        <ProductDetail />
-                ),
-
                 element: <ProductDetail />,
-
                 loader: getList,
             },
             {
