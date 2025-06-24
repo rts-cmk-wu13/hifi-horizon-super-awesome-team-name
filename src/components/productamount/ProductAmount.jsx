@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router";
 import "./_ProductAmount.scss";
+import { useCart } from "../header/shoppingcart/CartContext";
 
 const initialCount = 0;
 export default function ProductAmount() {
     const [count, setCount] = useState(initialCount);
     const product = useLoaderData()
+    const { addToCart } = useCart();
     function handleSubtract() {
         if (count > 0) {
             setCount(count - 1);
@@ -13,6 +15,12 @@ export default function ProductAmount() {
     }
     function handleAdd() {
         setCount(count + 1);
+    }
+    function handleAddToCart() {
+        if (count > 0) {
+            addToCart(product, count);
+            setCount(0);
+        }
     }
     return (
         <div className="product__choice">
@@ -40,7 +48,7 @@ export default function ProductAmount() {
                 <button type="button" onClick={handleSubtract}>-</button>
                 <div>{count}</div>
                 <button type="button" onClick={handleAdd}>+</button>
-                <button className="product__btn">Add to cart</button>
+                <button className="product__btn" onClick={handleAddToCart}>Add to cart</button>
             </div>
         </div>
     );
