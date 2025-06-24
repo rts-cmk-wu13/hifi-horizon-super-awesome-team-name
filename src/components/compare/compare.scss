@@ -1,10 +1,15 @@
 @use '../../style/placeholders/Flex.scss' as Flex;
 .compare {
+  width: 8rem;
+  float: right;
+  // margin-inline: auto;
   @extend %flex;
   gap: 0.6rem;
   justify-content: end;
   padding: 1rem;
   cursor: pointer;
+  // text-align: end;
+  // align-self: self-end;
 }
 
 .product--compare {
