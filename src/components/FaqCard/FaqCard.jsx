@@ -17,7 +17,7 @@ export default function FaqCard() {
              If we are unable to repair or replace the item(s) we will provide you with a full refund instead.</p>
              <p>Please note that if it is after the initial 30 days of purchase you must be able to certify the fault was present upon delivery and not by misuse.</p>
             </div>
-             <div className="margin-top">
+             <div className="margin-top" id="refunds">
                 <h3>REFUNDS</h3>
                 <p>Once your returned item is received and inspected, we will send you an email or phone call to notify you that we have received your returned item.We will also notify you of the approval or rejection of your refund.</p>
                 <p>If you are approved, then your refund will be processed, and a credit will automatically be applied to your original method of payment, within 3 working days. Please note we require an email address or contact number to arrange a refund that was purchased over the phone. There are certain situations where only partial refunds are granted or we cannot refund you; Any item not in its original condition, is damaged or missing parts for reasons not due to our error. Any damage that has been caused by misuse, such as a speaker drive unit being blown or water being introduced to the unit, or that has been damaged due to poor packing. Any item that is returned more than 30 days after delivery. In any instance, we will notify you as soon as possible to resolve this matter.</p>
@@ -31,7 +31,7 @@ export default function FaqCard() {
                    Depending on where you live, the time it may take for your exchanged product to reach you may vary. We will process the refund when the item arrives with us.</p>
                    <p>If you are shipping an item over £100, we would advise using a trackable shipping service or purchasing shipping insurance. We cannot guarantee that we will receive your returned item.</p>
              </div>
-             <div className="margin-top">
+             <div className="margin-top" id="delivery">
                 <h3>DELIVERY</h3>
                 <p>Please check the condition of all products delivered as soon as they are received. This does not affect your statutory rights. If there is a problem we would like to deal with this as soon as possible to alleviate any inconvenience to yourself.
                    As soon as we have delivered the goods to you, you will be responsible for them and any damage occasioned whilst in your possession. The majority of goods we send will require you to sign for them upon delivery. If you are not able to sign for a delivery, we will do our utmost to contact you to arrange when it is convenient to redeliver. Our responsibility for everything other than damage due to our negligence will end at the time the carrier tried to delivery the goods to you. 
@@ -45,7 +45,7 @@ export default function FaqCard() {
                     we would advise using a trackable shipping service or purchasing shipping insurance. We cannot guarantee that we will receive your returned item.</p>
                     <p>Please contact us before attempting to return your goods. For purchases bought in-store, you can also drop in and be refunded instantly.</p>
              </div>
-             <div className="margin-top">
+             <div className="margin-top" id="termsconditions">
                 <h3>SALE ITEMS</h3>
                 <p>Only regularly priced items may be refunded, unfortunately clearance, special order and outlet items cannot be refunded unless they are found to be faulty on arrival. For more details about returning secondhand or sale items, please contact sales@hifi-horizon.com.</p>
              </div>
