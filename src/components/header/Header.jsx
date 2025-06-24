@@ -15,16 +15,15 @@ export default function Header() {
     const [active, setActive] = useState(false);
     const [isCartOpen, setIsCartOpen] = useState(false);
     const [search, setSearch] = useState("");
+    console.log(search);
 
-    const searchdata = useLoaderData();
-
-    console.log(searchdata);
+    const searchData = useLoaderData();
+    console.log(searchData);
     
-
     const handleChange = e => {
         setSearch(e.target.value)
     }
-    console.log(showMenu);   
+    // console.log(showMenu);   
  
     const toggleCart = () => {
         setIsCartOpen(!isCartOpen);
@@ -49,12 +48,21 @@ export default function Header() {
                         id="search" 
                         placeholder="Search product..." 
                         onChange={handleChange}
-                        value={search}
+                        onClick={handleClick}
                     />
                     <FaSearch 
                         onClick={handleClick}
                         style={{ color: active ? 'red' : 'white', cursor: 'pointer' }}
                     />
+                    <div className="searchShow">
+                        {active && searchData && searchData
+                        .filter((itm) => 
+                            search.trim() !== '' && itm.type.toLowerCase().includes(search.toLowerCase())
+                        )
+                        .map((itm) => (                        
+                            <p key={itm.id}>{itm.type}</p>
+                        ))}
+                    </div>
                 </div>
                 <div className="header__user">
                     <FaUser color="white" />
