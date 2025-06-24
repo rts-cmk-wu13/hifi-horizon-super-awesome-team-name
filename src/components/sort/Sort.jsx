@@ -37,7 +37,7 @@ export default function Sort() {
   return (
     <>
       <div className="sort">
-      <h1 className="">Sort by</h1>
+      <h1 className="sort--heading">Sort by</h1>
       <div className="sort__brands">
         <p className="sort--para" onClick={() => setShowBrands(prev => !prev)} >Brands:<span>{showBrands ? <FiChevronUp /> : <FiChevronDown />}</span></p>
           {showBrands && uniqueBrands.map((brand) => (
