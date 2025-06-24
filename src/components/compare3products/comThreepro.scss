@@ -11,10 +11,10 @@
 
   &__left {
     @extend %flex;
-    // gap: 0;
+    gap: 0.5rem;
     width: 18rem;
     justify-content: start;
-    padding-block: 0.7rem;
+    padding: 0.7rem;
     background-color: Colors.$white;
   }
 
@@ -31,7 +31,6 @@
 
   &-three__compare {
     justify-self: end;
-    width: 10rem;
     background-color: orange;
     padding: 1rem;
   }

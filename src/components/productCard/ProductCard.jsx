@@ -18,7 +18,7 @@ export default function ProductCard ({filteredList}){
                     <p>({product.output})</p>
                     <p className="dolars--clr product--cardpara">£{product.price}</p>
                     <div className="addStock">
-                        <Link to={`/products/${product.id}`} className='product-card__btn'>Read more</Link>
+                        <Link to={`/products/${product.id}`} className='product-card__btn'>Add to cart</Link>
                         <div className="stockCircle">
                             <p>In stock</p>
                             <span  className="stock--circle"></span>
@@ -28,7 +28,7 @@ export default function ProductCard ({filteredList}){
                 </div>
             ))}
             {filteredList.length === 0 && (
-          <div className="text-center text-gray-500 mt-4">
+          <div className="">
             Sorry, no products match your filters.
           </div>
         )}

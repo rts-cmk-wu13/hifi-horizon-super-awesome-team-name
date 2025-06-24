@@ -5,7 +5,7 @@
 }
 
 .product-card{
-    max-width: 12rem;
+    max-width: 14rem;
     margin-inline: auto;
     display: flex;
     flex-direction: column;
@@ -39,9 +39,9 @@ p {
     gap: 0.5rem;
 }
 
+
 .stockCircle {
     @extend %flex;
-
     & p {
         margin-inline-end: 0.5rem;
     }
@@ -63,4 +63,15 @@ p {
     background-color: green;
     display: inline-block;
 }
+
+@media (max-width: 768px) {
+    .product-card__btn {
+        font-size: 0.5rem;
+        padding: 0.4rem;
+    }
+    .stockCircle p {
+        font-size: 0.5rem;
+    }
+}
+
 
