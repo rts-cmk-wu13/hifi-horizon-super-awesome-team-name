@@ -1,0 +1,114 @@
+@use "../../style/placeholders/_Flex.scss";
+@use "../../style/variables/Colors" as colors;
+// @use "../../style/variables/Colors" as colors;
+
+.header {
+  @extend %flex;
+  background-color: colors.$black;
+  padding: 1.5rem;
+  flex-wrap: wrap;
+
+&__user{
+  font-size: 1.5rem;
+  margin-inline-start: 2rem;
+}
+
+  &__logoNav {
+    @extend %flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__searchUserCart {
+    @extend %flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__search {
+    @extend %flex;
+    align-items: center;
+    background-color: colors.$white;
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.2rem;
+
+    input {
+      width: 12rem;
+      font-size: 0.8rem;
+      padding: 0.5rem 0.5rem;
+      border: none;
+      border-radius: 4px;
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+}
+
+.header--mobile {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 10%;
+  right: 0;
+  background-color: colors.$black;
+  padding: 2rem;
+  height: 14rem;
+  display: none;
+}
+
+.mobile--navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+.header--mobile nav ul {
+  display: block;
+  margin-block-start: 1rem;
+}
+
+.closeIcon {
+  font-size: 1.8rem;
+  position: absolute;
+  top: 3.5%;
+  right: 5%;
+  background-color: black;
+  display: none;
+  z-index: 999;
+  width: 4rem;
+}
+
+@media (max-width: 768px) {
+  
+  .header__logoNav, input[name="search"] {
+    display: none;
+  }
+
+  .closeIcon, .header--mobile {
+    display: block;
+  }
+
+  .header__search {
+    background-color: colors.$black;
+  }
+  .header__searchUserCart {
+    width: 90%;
+    margin-inline: auto;
+    
+  }
+  .clr {
+    color: colors.$white;
+  }
+  .hamburger {
+    display: inline-flex;
+  }
+}
+
+.header__cart {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-inline: 1rem;
+}

@@ -1,0 +1,37 @@
+@use '../../style/placeholders/Flex';
+
+.product__table {
+  border-top: 0.01rem solid #949494;
+  padding-block: 3rem;
+}
+
+table {
+  width: 70%;
+  border-collapse: collapse;
+  margin-block-start: 1rem;
+}
+
+tr {
+  border: none;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+  background-color: #ddd;
+}
+
+
+td {
+  margin-block: 0.4rem;
+  padding-block: 1rem;
+  text-align: center;
+}
+
+
+td:first-child {
+  border-right: 0.02rem solid rgb(160, 158, 158);
+}
+

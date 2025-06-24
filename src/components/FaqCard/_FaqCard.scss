@@ -1,0 +1,42 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 93.7%;
+    margin: 2.25rem auto;
+}
+
+.faq-card{
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(49, 49, 49, 0.4);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    max-width: 69rem;
+
+}
+
+p{
+    font-size: smaller;
+}
+
+p + p{
+    margin-top: 1.5rem;
+}
+
+.margin-top{
+    margin-top: 1.5rem;
+}
+
+.margin-block{
+    margin-block: 1.5rem;
+}
+h2{
+    font-weight: 300;
+    font-size: 1.55rem;
+    line-height: 1.2;
+}
+
+h1{
+    font-weight: 500;
+}

@@ -1,17 +1,15 @@
-import { Link, useLoaderData } from "react-router";
-import { useAuth } from "../contexts/AuthContext"
+import React from 'react';
+import ProductCard from './../components/productCard/ProductCard';
+import Sort from '../components/sort/Sort';
 
-export default function Products() {
-    const lists = useLoaderData();
-    const { token } = useAuth()
-
+export default function ProductsPage() {
     return (
-        <ul>
-            {lists.map(list => (
-                <li key={list.id}>
-                    <Link to={`/lists/${list.id}`}>{list.name}</Link>
-                </li>
-            ))}
-        </ul>
-    )
+        <section className='products'>
+            <h3 className="products--header">PRODUCTS</h3>
+            <div className="products__main">
+                <Sort />
+                {/* <ProductCard /> */}
+            </div>
+        </section>  
+    );
 }

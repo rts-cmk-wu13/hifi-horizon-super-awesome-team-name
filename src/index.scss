@@ -5,67 +5,55 @@
 @use "./components/loading/Loading";
 @use "./components/navigation/Navigation";
 @use "./style/variables/Colors";
+@use "./style/mixins/Font-mixin";
+@use "./components/hero/hero.scss";
+@use "./components/nyhedsbrev/nyhed.scss";
 
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: light-dark( #213547, rgba(255, 255, 255, 0.87));
-  background-color:  light-dark(#FFF, #242424);;
+@use "./components/sort/sort.scss";
+@use "./components/productSpecific/productSpecific.scss";
+@use "./components/productCard/ProductCard.scss";
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@use "./style/products.scss";
+@use "./components/compare/compare.scss";
+@use "./components/compare3products/comThreepro.scss";
+@use "./components/productText/productText.scss";
+@use "./components/productTable/productTable.scss";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+
+html, body {
+  font-family: Font-mixin.$base-font;
+  background-color: #f4f4f2;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color:light-dark(#747bff,#535bf2);
+  text-decoration: none;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 20rem;
-  min-height: 100vh;
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-#root {
-max-width: 80rem;
-margin: 0 auto;
-padding: 2rem;
-text-align: center;
-
+.dolars--clr {
+  font-size: 0.7rem;
+  font-weight: 600;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: light-dark(#f9f9f9,#1a1a1a);
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.margin-top{
+  margin-top: 5rem;
 }

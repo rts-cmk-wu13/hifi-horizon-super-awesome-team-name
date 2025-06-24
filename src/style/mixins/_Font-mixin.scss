@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url("/fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf");
+  font-style: italic;
+  font-weight: 100 900;
+}
+
+$base-font: 'OpenSans', sans-serif;
+
+// @mixin heading($size: 2.25rem, $weight: 700, $line-height: 0%) {
+//   font-family: $base-font;
+//   font-size: $size;
+//   font-weight: $weight;
+//   line-height: $line-height;
+// }
+
+// @mixin body($size: 1.25rem, $weight: 400, $line-height: 0%) {
+//   font-family: $base-font;
+//   font-size: $size;
+//   font-weight: $weight;
+//   line-height: $line-height;
+// }
