@@ -6,7 +6,7 @@ export default function FaqCard() {
   return (
         <div className="faq-card">
             <div>
-            <h2>Here at HiFi Horizon, our trained product specialists aim to provide the right product for <br /> you. 
+            <h2>Here at HiFi Horizon, our trained product specialists aim to provide the right product for you. 
                 We take great care with all of our orders to ensure you are fully happy with the product.</h2>
             <p className="margin-top">We aim to resolve any problems to your satisfaction.
              Please contact us directly, if, for any reason, you have an issue with your order, your product or any other service provided. OUR GUARANTEE
