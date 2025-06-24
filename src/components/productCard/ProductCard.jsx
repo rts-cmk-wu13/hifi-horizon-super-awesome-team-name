@@ -1,10 +1,16 @@
-import { Link, useLoaderData } from "react-router";
+// import { Link, useLoaderData } from "react-router";
 import Compare from '../../components/compare/Compare'
 import './_productCard.scss';
 import './_PopularProductCard.scss';
+import { useCart } from '../header/shoppingcart/CartContext';
 
 export default function ProductCard ({filteredList}){
     // const products = useLoaderData();
+    const { addToCart } = useCart();
+
+    function handleAddToCart(product) {
+        addToCart(product, 1);
+    }
 
     return (
         <section className="products__card">
@@ -18,7 +24,7 @@ export default function ProductCard ({filteredList}){
                     <p>({product.output})</p>
                     <p className="dolars--clr product--cardpara">£{product.price}</p>
                     <div className="addStock">
-                        <Link to={`/products/${product.id}`} className='product-card__btn'>Add to cart</Link>
+                        <button className='product-card__btn' onClick={() => handleAddToCart(product)}>Add to cart</button>
                         <div className="stockCircle">
                             <p>In stock</p>
                             <span  className="stock--circle"></span>
