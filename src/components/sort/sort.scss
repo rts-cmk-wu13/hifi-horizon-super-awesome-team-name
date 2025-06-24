@@ -2,11 +2,11 @@
 @use '../../style/variables/Colors' as colors;
 
 .sortsForm {
-  background-color: colors.$light-2-grey;
-  
+  background-color: colors.$light-2-grey;  
 }
+
 .sort {
-  width: 10rem;
+  width: 6rem;
   margin-block-start: 1rem;
   // padding: 0.3rem;
 
