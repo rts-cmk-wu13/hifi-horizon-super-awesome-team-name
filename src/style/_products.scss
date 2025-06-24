@@ -14,10 +14,12 @@
     }
 
     &__main {
-        @extend %flex;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        // @extend %flex;
         align-items: start;
-        gap: 1.3rem;
-        justify-content: center;
+        // gap: 1.3rem;
+        // justify-content: center;
         margin-inline: 2rem;
     }
 }

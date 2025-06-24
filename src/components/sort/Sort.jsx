@@ -9,12 +9,20 @@ export default function Sort() {
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [selectedColors, setSelectedColors] = useState([]);
 
+  const [showBrands, setShowBrands] = useState(false);
+  const [showColors, setShowColors] = useState(false);
+
   const sortItems = useLoaderData();
 
   const uniqueBrands = [...new Set(sortItems.map((item) => item.brand))];
   const uniqueColors = [
     ...new Set(sortItems.flatMap((item) => item.colors)),
   ];
+
+  const typeToggle = (list) => {
+    setSelectedBrands(selectedBrands === list ? null : list)
+  }
+
   
   const filteredList = sortItems.filter((player) => {
   const matchBrand =
@@ -28,46 +36,35 @@ export default function Sort() {
 
   return (
     <>
-      <div className="sort__style">
+      <div className="sort">
       <h1 className="">Sort by</h1>
       <div className="sort__brands">
-  <p>Brands:</p>
-  {uniqueBrands.map((brand) => (
-  <label key={brand} style={{ marginRight: '1rem' }}>
-    {brand}
-    <input
-      type="checkbox"
-      name="brand"
-      value={brand}
-      checked={selectedBrands.includes(brand)}
-      onChange={() => {
-        setSelectedBrands((prev) =>
-          prev.includes(brand)
-            ? prev.filter((b) => b !== brand)
-            : [...prev, brand]
-        );
-      }}
-    />
-  </label>
-))}
-<button onClick={() => setSelectedBrands([])}>Clear</button>
-</div>
-        {/* <select
-          value={selectedBrand}
-          onChange={(e) => setSelectedBrand(e.target.value)}
-          className=""
-        >
-          <option value="">Brands</option>
-          {uniqueBrands.map((brand) => (
-            <option key={brand} value={brand}>
-              {brand}
-            </option>
+        <p className="sort--para" onClick={() => setShowBrands(prev => !prev)} >Brands:<span>{showBrands ? <FiChevronUp /> : <FiChevronDown />}</span></p>
+          {showBrands && uniqueBrands.map((brand) => (
+            <label key={brand} style={{ padding: '0.3rem 0.5rem'}}>
+            {brand}
+            <input
+              type="checkbox"
+              name="brand"
+              value={brand}
+              checked={selectedBrands.includes(brand)}
+              onChange={() => {
+                setSelectedBrands((prev) =>
+                  prev.includes(brand)
+                    ? prev.filter((b) => b !== brand)
+                    : [...prev, brand]
+                );
+              }}
+            />
+            </label>
           ))}
-        </select> */}
+{/* <button onClick={() => setSelectedBrands([])}>Clear</button> */}
+</div>
+        
 <div className="sort__colors">
-  <p>Colors:</p>
-  {uniqueColors.map((color) => (
-  <label key={color} style={{ marginRight: '1rem' }}>
+  <p className="sort--para" onClick={() => setShowColors(prev => !prev)} >Colors:<span>{showColors ? <FiChevronUp /> : <FiChevronDown />}</span></p>
+  {showColors && uniqueColors.map((color) => (
+  <label key={color} style={{ padding: '0.3rem 0.5rem'}}>
     {color}
     <input
       type="checkbox"
@@ -86,7 +83,7 @@ export default function Sort() {
     
   </label>
 ))}
-<button onClick={() => setSelectedColors([])}>Clear</button>
+{/* <button onClick={() => setSelectedColors([])}>Clear</button> */}
 </div>
       </div>
       <ProductCard filteredList={ filteredList } />
