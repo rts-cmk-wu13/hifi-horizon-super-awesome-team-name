@@ -12,10 +12,10 @@ export default function Footer() {
                     <li><NavLink to="/about">About Us</NavLink></li>
                 </ul>
                 <ul className="footer__links">
-                    <li><Link to="#">Return & Refunds</Link></li>
-                    <li><Link to="#">Delivery</Link></li>
-                    <li><Link to="#">Privacy Policy</Link></li>
-                    <li><Link to="#">Terms & Conditions</Link></li>
+                    <li><Link to="/faq">Return & Refunds</Link></li>
+                    <li><Link to="/faq">Delivery</Link></li>
+                    <li><Link to="/faq">Privacy Policy</Link></li>
+                    <li><Link to="/faq">Terms & Conditions</Link></li>
                 </ul>
                 <ul className="footer__somes">
                     <li className="footer__some footer__contact">
