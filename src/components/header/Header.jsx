@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useLoaderData } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
 import Navigation from "../navigation/Navigation";
 import Logo from "../logo/Logo";
 import { FaUser } from "react-icons/fa";
@@ -60,7 +60,7 @@ export default function Header() {
                             search.trim() !== '' && itm.type.toLowerCase().includes(search.toLowerCase())
                         )
                         .map((itm) => (                        
-                            <p key={itm.id}>{itm.type}</p>
+                            <Link to={`/products/${product.id}`} key={itm.id}>{itm.type}</Link>
                         ))}
                     </div>
                 </div>

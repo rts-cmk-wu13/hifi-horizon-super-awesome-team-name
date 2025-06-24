@@ -83,7 +83,6 @@ export default function Sort() {
     
   </label>
 ))}
-{/* <button onClick={() => setSelectedColors([])}>Clear</button> */}
 </div>
       </div>
       <ProductCard filteredList={ filteredList } />
