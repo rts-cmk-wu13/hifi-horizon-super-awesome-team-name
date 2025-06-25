@@ -1,4 +1,5 @@
 @use '../../../style/variables/Colors' as c;
+
 .shopping-cart-dropdown {
     position: absolute;
     top: 150%;
@@ -32,16 +33,33 @@
 
 .cart-content {
     padding: 1.25rem;
+
     ul {
         padding: 1rem 0;
-        li {
-            margin: .5rem 0;
+
+        .shop-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // margin: .5rem 0;
             font-size: 1.2rem;
+            font-weight: 300;
             color: c.$dark-grey;
-            padding: .4rem;
-            border-radius: 3px;
+            padding: .8rem .5rem;
+            &:not(:first-child) {
+                border-top: 1px solid c.$grey;
+            }
+            .remove-item-btn {
+                background: none;
+                border: none;
+                cursor: pointer;
+                margin-left: 0.5rem;
+                color: c.$dark-grey;
+                font-size: 1.1rem;
+            }
+
             &:hover {
-                background-color: c.$orange;
+                background-color: c.$light-2-grey;
                 color: c.$white;
             }
         }
@@ -54,16 +72,6 @@
     margin-bottom: 1.25rem;
 }
 
-.cart-clear-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: c.$black;
-}
 
 .cart-buttons {
     display: flex;
