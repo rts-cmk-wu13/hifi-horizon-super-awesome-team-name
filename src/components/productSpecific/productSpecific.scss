@@ -54,3 +54,30 @@
   font-size: 2.3rem;
   color: Colors.$light-2-grey;
 }
+
+@media (max-width: 768px) {
+  .product-specific {
+    display: block;
+  }
+
+  .product__leftImage {
+    display: block;
+
+  }
+
+  .product__left {
+    display: block;
+    margin-block: 1rem;
+  }
+
+  .product-image {
+    width: 40%;
+  }
+  .arrow-icon {
+    display: none;
+  }
+
+  .product__btn {
+    padding: 0.5rem;
+  }
+}
