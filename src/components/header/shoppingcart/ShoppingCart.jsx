@@ -21,9 +21,11 @@ const ShoppingCart = ({ isOpen }) => {
                 ) : (
                     <ul>
                         {cart.map(item => (
-                            <li key={item.id}>
-                                {item.type} x {item.quantity} (£{item.price} each)
-                            </li>
+                            <Link to={`/products/${item.id}`}>
+                                <li key={item.id}>
+                                    {item.type} x {item.quantity} (£{item.price} each)
+                                </li>
+                            </Link>
                         ))}
                     </ul>
                 )}
