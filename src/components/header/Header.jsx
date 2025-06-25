@@ -36,6 +36,7 @@ export default function Header() {
         setSearch(e.target.value)
     }
     console.log(search);
+    
 
     return (
         <header className="header">
@@ -55,7 +56,7 @@ export default function Header() {
                                 search.trim() !== '' && itm.type.toLowerCase().includes(search.toLowerCase())
                             )
                             .map((itm) => (
-                                <Link to={`/products/${product.id}`} key={itm.id}>{itm.type}</Link>
+                                <Link to={`/products/${itm.id}`} key={itm.id}>{itm.type}</Link>
                             ))}
                     </div>
                 </div>
