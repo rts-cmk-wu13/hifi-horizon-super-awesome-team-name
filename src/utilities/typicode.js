@@ -1,5 +1,5 @@
 
-import { redirect } from "react-router"
+// import { redirect } from "react-router"
 import queryClient from "./queryClient"
 
 // ! Uden tanstack:
