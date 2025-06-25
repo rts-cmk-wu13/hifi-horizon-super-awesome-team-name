@@ -17,8 +17,7 @@ export default function Nyhed() {
       return;
     }
     try {
-      // Replace URL with your backend endpoint
-      const res = await fetch("/api/newsletter", {
+      const res = await fetch("https://hifi-api-howz.onrender.com/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
