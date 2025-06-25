@@ -7,7 +7,6 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import ShoppingCart from './shoppingcart/ShoppingCart';
 import { useCart } from './shoppingcart/CartContext';
-// import { Link, useLoaderData } from 'react-router';
 import Search from '../Search';
 
 export default function Header() {
@@ -22,16 +21,6 @@ export default function Header() {
         setIsCartOpen(!isCartOpen);
     };
 
-    // Toggle search input
-    const [active, setActive] = useState(false);
-    const handleClick = () => {
-        setActive(!active);
-    };
-
-    const handleChange = e => {
-        setSearch(e.target.value)
-    }
-    // console.log(search);    
 
     return (
         <header className="header">
@@ -41,19 +30,22 @@ export default function Header() {
             </div>
             <div className="header__searchUserCart">
                 <Search />
+
                 <div className="header__user">
                     <FaUser color="white" />
                 </div>
-                <div className="header__cart"
-                    onClick={toggleCart}
-                >
+
+                <div className="header__cart" onClick={toggleCart}>
                     <IoMdCart color="white" />
                     {cartCount > 0 && (
                         <span className="cart-badge">{cartCount}</span>
                     )}
                     <ShoppingCart isOpen={isCartOpen} />
                 </div>
-                <GiHamburgerMenu color="white" className="hamburger" onClick={() => setShowMenu(true)} />
+
+                <div className="header__hamburger">
+                    <GiHamburgerMenu color="white" className="hamburger" onClick={() => setShowMenu(true)} />                    
+                </div>
             </div>
             {showMenu && (
                 <>

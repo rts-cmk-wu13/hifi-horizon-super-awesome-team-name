@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { readFromLocalStorage, saveToLocalStorage } from "../../../utilities/localstorage";
 
+
 const CartContext = createContext();
 
 export function useCart() {
@@ -28,16 +29,15 @@ export function CartProvider({ children }) {
             }
         });
     };
-
-    const clearCart = () => {
-        setCart([]);
-        saveToLocalStorage('cart', []);
+    const removeFromCart = (productId) => {
+        setCart(prevCart => prevCart.filter(item => item.id !== productId));
+        saveToLocalStorage('cart', cart.filter(item => item.id !== productId));
     };
-
+    
     const value = {
         cart,
         addToCart,
-        clearCart,
+        removeFromCart,
         cartCount: cart.reduce((sum, item) => sum + item.quantity, 0),
     };
 

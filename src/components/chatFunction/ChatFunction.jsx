@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./_chatFunction.scss";
+import "./_ChatFunction.scss";
 
 const ChatFunction = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,10 +18,10 @@ const ChatFunction = () => {
         }
     };
 
-    // Simulate online/offline status (replace with real logic as needed)
+
     const [isOnline, setIsOnline] = useState(true);
 
-    // Example: toggle online status for demonstration (remove in production)
+    
     setTimeout(() => setIsOnline(!isOnline), 10000);
 
     return (
