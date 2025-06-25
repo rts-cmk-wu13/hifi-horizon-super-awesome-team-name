@@ -41,19 +41,22 @@ export default function Header() {
             </div>
             <div className="header__searchUserCart">
                 <Search />
+
                 <div className="header__user">
                     <FaUser color="white" />
                 </div>
-                <div className="header__cart"
-                    onClick={toggleCart}
-                >
+
+                <div className="header__cart" onClick={toggleCart}>
                     <IoMdCart color="white" />
                     {cartCount > 0 && (
                         <span className="cart-badge">{cartCount}</span>
                     )}
                     <ShoppingCart isOpen={isCartOpen} />
                 </div>
-                <GiHamburgerMenu color="white" className="hamburger" onClick={() => setShowMenu(true)} />
+
+                <div className="header__hamburger">
+                    <GiHamburgerMenu color="white" className="hamburger" onClick={() => setShowMenu(true)} />                    
+                </div>
             </div>
             {showMenu && (
                 <>
