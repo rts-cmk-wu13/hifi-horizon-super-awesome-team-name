@@ -8,23 +8,34 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import ShoppingCart from './shoppingcart/ShoppingCart';
 import { useCart } from './shoppingcart/CartContext';
+import { Link, useLoaderData } from 'react-router';
 
 export default function Header() {
     const [showMenu, setShowMenu] = useState(false);
-    const [active, setActive] = useState(false);
+    console.log(showMenu);
+
+    // Shopping cart functionality
     const [isCartOpen, setIsCartOpen] = useState(false);
     const { cart } = useCart();
     const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
-    console.log(showMenu);
-
     const toggleCart = () => {
         setIsCartOpen(!isCartOpen);
     };
-    // console.log(showMenu);   
 
+    // Toggle search input
+    const [active, setActive] = useState(false);
     const handleClick = () => {
         setActive(!active);
     };
+
+    // search functionality
+    const searchData = useLoaderData();
+    const [search, setSearch] = useState("");
+    console.log(searchData);
+    const handleChange = e => {
+        setSearch(e.target.value)
+    }
+    console.log(search);
 
     return (
         <header className="header">
@@ -34,11 +45,19 @@ export default function Header() {
             </div>
             <div className="header__searchUserCart">
                 <div className="header__search">
-                    <input type="text" name="search" id="search" placeholder="Search product..." />
+                    <input type="text" name="search" id="search" placeholder="Search product..." onChange={handleChange} onClick={handleClick} />
                     <FaSearch
                         onClick={handleClick}
-                        style={{ color: active ? 'red' : 'white', cursor: 'pointer' }}
-                    />
+                        style={{ color: active ? 'red' : 'white', cursor: 'pointer' }} />
+                    <div className="searchShow">
+                        {active && searchData && searchData
+                            .filter((itm) =>
+                                search.trim() !== '' && itm.type.toLowerCase().includes(search.toLowerCase())
+                            )
+                            .map((itm) => (
+                                <Link to={`/products/${product.id}`} key={itm.id}>{itm.type}</Link>
+                            ))}
+                    </div>
                 </div>
                 <div className="header__user">
                     <FaUser color="white" />
@@ -46,7 +65,6 @@ export default function Header() {
                 <div className="header__cart"
                     onClick={toggleCart}
                 >
-
                     <IoMdCart color="white" />
                     {cartCount > 0 && (
                         <span className="cart-badge">{cartCount}</span>
