@@ -52,7 +52,7 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 10%;
+  top: 100%;
   right: 0;
   background-color: colors.$black;
   padding: 2rem;
@@ -73,7 +73,7 @@
 .closeIcon {
   font-size: 1.8rem;
   position: absolute;
-  top: 3.5%;
+  top: 25.5%;
   right: 5%;
   background-color: black;
   display: none;
@@ -82,12 +82,24 @@
 }
 
 // 
-.searchShow {
-  position: absolute;
-  top: 4.05rem;
-  background-color: white;
+.search {
+
+  /* Default: desktop (>=768px) */
+
+  &__show {
+    @extend %flex-column;
+    align-items: baseline;
+    gap: 0.3rem;
+    position: absolute;
+    top: 4.09rem;
+    width: 13rem;
+    background-color: white;
+  }
+
+  &--list {
+    margin: 0.5rem;
+  }
 }
-// 
 
 .cart-badge {
   position: absolute;
@@ -132,4 +144,20 @@
     cursor: pointer;
     font-size: 1.5rem;
     margin-inline: 1rem;
+}
+
+
+.search-icon {
+  color: black;
+  cursor: pointer;
+}
+
+/* Mobile (<768px): white by default, orange when active */
+@media (max-width: 767px) {
+  .search-icon {
+    color: white;
+  }
+  .search-icon--active {
+    color: orange;
+  }
 }
