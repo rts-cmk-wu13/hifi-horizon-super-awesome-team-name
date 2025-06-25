@@ -1,11 +1,11 @@
-// import { Link, useLoaderData } from "react-router";
+import { Link, useLoaderData } from "react-router";
 import Compare from '../../components/compare/Compare'
 import './_productCard.scss';
 import './_PopularProductCard.scss';
 import { useCart } from '../header/shoppingcart/CartContext';
 
 export default function ProductCard ({filteredList}){
-    // const products = useLoaderData();
+    const products = useLoaderData();
     const { addToCart } = useCart();
 
     function handleAddToCart(product) {
@@ -16,6 +16,7 @@ export default function ProductCard ({filteredList}){
         <section className="products__card">
             {filteredList.map(product => (
                 <div className="product-card" key={product.id}>
+                    <Link to={`/products/${product.id}`} className="product-card__link" >
                     <Compare comStyle="comStyle"/>
                     <figure className='product-card__figure'>
                         <img className='product-card__img' src={product.image} alt="" />
@@ -23,6 +24,7 @@ export default function ProductCard ({filteredList}){
                     <p>{product.type}</p>
                     <p>({product.output})</p>
                     <p className="dolars--clr product--cardpara">£{product.price}</p>
+                    </Link>
                     <div className="addStock">
                         <button className='product-card__btn' onClick={() => handleAddToCart(product)}>Add to cart</button>
                         <div className="stockCircle">

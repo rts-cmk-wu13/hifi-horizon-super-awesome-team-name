@@ -1,5 +1,6 @@
 @use '../../../src/style/placeholders/Flex.scss';
 @use '../../style/placeholders/Buttons';
+@use '../../style/variables/Colors' as c;
 
 .products__card {
     @extend %gridThree;
@@ -16,7 +17,25 @@
     background-color: rgb(255, 255, 255);
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(49, 49, 49, 0.4);
-    border-radius: 2%;    
+    border-radius: 2%;
+    position: relative; // Ensure stacking context for button if needed
+    transition: box-shadow 0.2s;
+    cursor: pointer;
+
+    // Optional: Add hover effect for card
+    &:hover {
+        box-shadow: 0 8px 16px rgba(49, 49, 49, 0.5);
+    }
+}
+
+.product-card__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
+    flex: 1 1 auto;
 }
 
 p {
@@ -39,8 +58,10 @@ p {
 .addStock {
     @extend %flex;
     gap: 0.5rem;
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.5rem;
 }
-
 
 .stockCircle {
     @extend %flex;
@@ -55,6 +76,12 @@ p {
     padding: 0.5rem;
     font-size: small;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+
+    &:hover, &:focus {
+        background: c.$dark-grey;
+    }
 }
 
 .stock--circle {
@@ -74,5 +101,3 @@ p {
         font-size: 0.5rem;
     }
 }
-
-
