@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { readFromLocalStorage, saveToLocalStorage } from "../../../utilities/localstorage";
 
+
 const CartContext = createContext();
 
 export function useCart() {

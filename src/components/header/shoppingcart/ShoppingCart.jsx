@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import './_shoppingCart.scss';
+import './_ShoppingCart.scss';
 import { useCart } from './CartContext';
 import { FaRegTrashAlt } from 'react-icons/fa';
 
