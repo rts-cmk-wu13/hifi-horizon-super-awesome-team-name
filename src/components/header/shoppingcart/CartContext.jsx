@@ -29,9 +29,15 @@ export function CartProvider({ children }) {
         });
     };
 
+    const clearCart = () => {
+        setCart([]);
+        saveToLocalStorage('cart', []);
+    };
+
     const value = {
         cart,
         addToCart,
+        clearCart,
         cartCount: cart.reduce((sum, item) => sum + item.quantity, 0),
     };
 

@@ -1,13 +1,21 @@
-import { Link } from 'react-router'; 
+import { Link } from 'react-router';
 import './_shoppingCart.scss';
 import { useCart } from './CartContext';
 
 const ShoppingCart = ({ isOpen }) => {
-    const { cart } = useCart(); // <-- use context directly
+    const { cart, clearCart } = useCart(); // <-- get clearCart from context
 
     return (
         <div className={`shopping-cart-dropdown ${isOpen ? 'open' : ''}`}>
             <div className="cart-content">
+                <button
+                    className="cart-clear-btn"
+                    onClick={clearCart}
+                    aria-label="Empty cart"
+                    title="Empty cart"
+                >
+                    ×
+                </button>
                 {cart.length === 0 ? (
                     <p className="empty-cart-message">Your cart is empty</p>
                 ) : (

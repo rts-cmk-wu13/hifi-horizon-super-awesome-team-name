@@ -39,6 +39,17 @@
     margin-bottom: 1.25rem;
 }
 
+.cart-clear-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #888;
+}
+
 .cart-buttons {
     display: flex;
     gap: 0.625rem;
