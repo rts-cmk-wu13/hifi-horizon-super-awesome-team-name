@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./_chatFunction.scss";
+import "./_ChatFunction.scss";
 
 const ChatFunction = () => {
     const [isOpen, setIsOpen] = useState(false);
