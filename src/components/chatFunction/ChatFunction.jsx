@@ -18,12 +18,31 @@ const ChatFunction = () => {
         }
     };
 
+    // Simulate online/offline status (replace with real logic as needed)
+    const [isOnline, setIsOnline] = useState(true);
+
+    // Example: toggle online status for demonstration (remove in production)
+    setTimeout(() => setIsOnline(!isOnline), 10000);
+
     return (
         <div className="chat-wrapper">
             {isOpen && (
                 <div className="chat-popup">
                     <div className="chat-header">
-                        <h3>Chat with us</h3>
+                        <div className='chat-avatar'>
+                        </div>
+                        <div>
+                        <p className="chat-title">Chatting with</p>
+                        <p className="chat-name">{isOnline ? "John Rick" : "Offline"}</p> 
+                        <div>
+                            <span
+                                className="status-dot"
+                                style={{
+                                    backgroundColor: isOnline ? 'green' : 'red'
+                                }}
+                            ></span>
+                        </div>
+                        </div>
                         <button onClick={toggleChat} className="close-btn">×</button>
                     </div>
                     <div className="chat-content">
