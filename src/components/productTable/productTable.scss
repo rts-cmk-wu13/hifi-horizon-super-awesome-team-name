@@ -6,7 +6,7 @@
 }
 
 table {
-  width: 70%;
+  width: 90%;
   border-collapse: collapse;
   margin-block-start: 1rem;
 }
@@ -23,15 +23,23 @@ tr:nth-child(odd) {
   background-color: #ddd;
 }
 
-
 td {
   margin-block: 0.4rem;
   padding-block: 1rem;
   text-align: center;
 }
 
-
 td:first-child {
   border-right: 0.02rem solid rgb(160, 158, 158);
+}
+
+@media (max-width: 768px) {
+
+  .product__table h2 {
+    font-size: 0.7rem;
+  }
+  td {
+    font-size: 0.5rem;
+  }
 }
 

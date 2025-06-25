@@ -35,3 +35,13 @@
     padding: 1rem;
   }
 }
+
+@media (max-width: 768px) {
+  .compare-three {
+    display: block;
+    margin-block-end: 5rem;
+  }
+  .compare__left {
+    width: 100%;
+  }
+}
