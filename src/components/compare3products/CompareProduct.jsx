@@ -6,7 +6,7 @@ export default function CompareProduct() {
   return (
     <div className="compare__left">
       <div>
-        <img src={`/${product.image}`} alt={product.image} />
+        <img src={product.image} alt={product.type} />
       </div>
       <div className="compare__right">
         <h4>{product.categories}</h4>
