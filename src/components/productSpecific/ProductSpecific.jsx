@@ -14,7 +14,7 @@ export default function ProductSpecific({ product }) {
                 <div className="product__leftImage">
                     <MdOutlineArrowBackIosNew className="arrow-icon" />
                     <div className="product-image">
-                        <img src={`/${product.image}`} alt={product.categories} />
+                        <img src={product.image} alt={product.type} />
                     </div>
                     <MdArrowForwardIos className="arrow-icon" />
                 </div>
