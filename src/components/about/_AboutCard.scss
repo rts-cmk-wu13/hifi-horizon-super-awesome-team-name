@@ -1,0 +1,31 @@
+@use "../../style/variables/Colors" as c;
+@use "../../style/placeholders/Flex" as fl;
+
+.about__card {
+    @extend %flex;
+    align-items: start;
+    gap: 2rem;
+    padding-bottom: 1.5rem;
+    flex-wrap: wrap;
+    img {
+        flex: 1 1 19rem;
+    }
+    section {
+        flex: 1 1 19rem;
+        h2, h3, p{
+            padding-bottom: .5rem;
+            text-align: center;
+        }
+        h2 {
+            font-size: 1rem;
+            font-weight: 900;
+        }
+        h3 {
+            font-size: .8125rem;
+            color: c.$orange;
+        }
+        p {
+            font-size: .75rem;
+        }
+    }
+}

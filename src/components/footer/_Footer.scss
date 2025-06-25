@@ -1,0 +1,73 @@
+@use "../../style/variables/Colors" as c;
+@use "../../style/mixins/Font-mixin" as f;
+@use "../../style/placeholders/Base";
+
+footer {
+    @extend %base;
+    background-color: c.$black;
+    color: c.$white;
+    text-align: start;
+    padding: 2rem;
+    width: 100%;
+
+    .footer__linkings {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin: .7rem 0;
+
+            a {
+                color: c.$white;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .footer__contact,
+        .footer__links {
+            font-size: 1.125rem;
+        }
+
+        .footer__some:not(:first-of-type) {
+            font-size: 0.875rem;
+        }
+        .footer__phone {
+            margin-right: 1.2rem
+        }
+        .footer__socials {
+            display: flex;
+            gap: .75rem;
+            font-size: 1.5rem;
+        }
+    }
+
+    .footer__copyright {
+        border-top: 1px solid c.$grey;
+        margin-top: 1rem;
+        font-size: 0.6875rem;
+        padding-top: .5rem;
+        div:first-of-type {
+            font-size: 2.625rem;
+            display: flex;
+            gap: 0.75rem;
+        }
+        div:last-of-type {
+            display: flex;
+            gap: 6.9%;
+            align-items: center;
+            margin-top: 0.5rem;
+        }
+    }
+}

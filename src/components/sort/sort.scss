@@ -1,0 +1,29 @@
+@use '../../style/placeholders/Flex';
+@use '../../style/variables/Colors' as colors;
+
+.sort { 
+  width: 10rem;
+  @extend %flex-column;
+  align-items: normal;
+  gap: 0.5rem;
+
+  &--heading {
+    font-size: 0.9rem;
+  }
+  
+  &__brands, &__colors {
+    align-items: start;
+    background-color: colors.$light-2-grey;
+
+    & label {
+      @extend %flex;
+      font-size: 0.7rem;
+    }
+  }
+
+  &--para {
+    @extend %flex;
+    padding-block: 0.3rem;
+    box-shadow: 0 2px 1px 0 colors.$grey;
+  }
+}
