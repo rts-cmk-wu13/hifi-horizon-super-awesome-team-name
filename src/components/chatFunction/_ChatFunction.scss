@@ -1,23 +1,23 @@
 
 .chat-wrapper {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 1.25rem;
+    right: 1.25rem;
     z-index: 1000;
 }
 
 .chat-icon {
-    background-color: #ff6900;
-    color: white;
+    background-color: white;
+    color: #ff6900;
     border: none;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 3.75rem;
+    height: 3.75rem;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease;
 
     &:hover {
@@ -25,89 +25,114 @@
     }
 
     svg {
-        width: 30px;
-        height: 30px;
+        width: 1.875rem;
+        height: 1.875rem;
     }
+}
+
+.status-dot {
+    position: absolute;
+    top: 2.2rem;
+    left: 7.5rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 50%;
+    background-color: green; // Change to red if offline
+}
+
+.chat-title{
+    color: black;
+    margin-left: 0.5rem;
+}
+
+.chat-name{
+    margin-top: 0.2rem;
+    margin-left: 0.5rem;
+}
+
+.chat-avatar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+
 }
 
 .chat-popup {
     position: absolute;
-    bottom: 80px;
+    bottom: 5rem;
     right: 0;
-    width: 300px;
-    height: 400px;
+    width: 18.75rem;
+    height: 25rem;
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 0.625rem;
+    box-shadow: 0 0.3125rem 1.25rem rgba(0, 0, 0, 0.2);
     animation: slideUp 0.3s ease;
 }
 
 .chat-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background-color: #ff6900;
+    padding: 0.9375rem;
+    background-color: #495464;
     color: white;
-    border-radius: 10px 10px 0 0;
-
-    h3 {
-        margin: 0;
-    }
 
     .close-btn {
         background: none;
         border: none;
+        position: absolute;
+        top: 0.6rem;
+        right: 0.6rem;
         color: white;
-        font-size: 24px;
+        font-size: 1.5rem;
         cursor: pointer;
-        padding: 0 5px;
+        padding: 0 0.3125rem;
     }
 }
 
 .chat-content {
-    padding: 15px;
+    padding: 0.9375rem;
     display: flex;
     flex-direction: column;
-    height: calc(100% - 60px); // Adjust for header height
+    height: calc(100% - 3.75rem); // Adjust for header height
 }
 
 .messages {
     flex-grow: 1;
     overflow-y: auto;
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem;
+    padding-right: 0.625rem;
 }
 
 .message {
-    padding: 8px 12px;
-    margin: 4px 0;
-    border-radius: 15px;
+    padding: 0.5rem 0.75rem;
+    margin: 0.25rem 0;
     max-width: 80%;
     word-wrap: break-word;
+    font-size: small;
 
     &.user {
-        background-color: #ff6900;
-        color: white;
+        background-color: #ffffff;
+        color: black;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
         margin-left: auto;
-        border-bottom-right-radius: 5px;
     }
 }
 
 .chat-input-form {
-    display: flex;
-    gap: 8px;
-    padding: 10px;
+    
+    gap: 0.5rem;
+    padding: 0.625rem;
     background-color: #f5f5f5;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 0.625rem 0.625rem;
 }
 
 .chat-input {
     flex-grow: 1;
-    padding: 8px 12px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 0.0625rem solid #ddd;
     outline: none;
-    font-size: 14px;
+    font-size: 0.875rem;
 
     &:focus {
         border-color: #ff6900;
@@ -117,8 +142,8 @@
 .send-button {
     background-color: #ff6900;
     color: white;
+    width: 100%;
     border: none;
-    border-radius: 1.25rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
     transition: background-color 0.2s ease;
@@ -131,7 +156,7 @@
 @keyframes slideUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(1.25rem);
     }
     to {
         opacity: 1;
