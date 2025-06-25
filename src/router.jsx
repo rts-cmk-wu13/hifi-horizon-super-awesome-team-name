@@ -12,7 +12,7 @@ import { handleSubmit } from "./utilities/actions";
 import Login from "./pages/Login";
 import About from "./pages/About";
 import MoreInfo from "./pages/MoreInfo";
-import FaQ from "./pages/FaQ";
+import FaQ from "./pages/Faq";
  
 const router = createBrowserRouter([
     {
